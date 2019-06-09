@@ -11,6 +11,8 @@ import {
 import Actors from "../layout/Actors/Actors";
 import SimilarMovies from "../layout/SimilarMovies/SimilarMovies";
 
+import MovieInfoBox from "../layout/MovieInfoBox/MovieInfoBox";
+
 class MovieDetails extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
@@ -36,11 +38,11 @@ class MovieDetails extends Component {
 
     // console.log(this.props.selectedMovieImages);
 
-    const backgroundImage1 = `https://image.tmdb.org/t/p/original${backdrop_path}`;
-
     return (
       <div>
-        <div
+        <MovieInfoBox selectedMovie={this.props.selectedMovie} />
+
+        {/* <div
           className="overviewBoard"
           style={{
             backgroundImage: `url(${backgroundImage1})`
@@ -78,7 +80,7 @@ class MovieDetails extends Component {
               <p>{overview}</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* start of the div under the background backdrop */}
         <div className="container-fluid moviegrossdiv">

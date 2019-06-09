@@ -1,14 +1,8 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import Spinner from "../../layout/Spinner/Spinner";
-
 import HeroImage from "../../layout/HeroImage/HeroImage";
-import NavBar from "../../layout/NavBar/NavBar";
 import SearchBar from "../../layout/SearchBar/SearchBar";
 import Grid from "../../layout/Grid/Grid";
-
-import Movies from "../../movies/Movies";
+import "./Home.css";
 
 class Home extends Component {
   render() {
@@ -25,8 +19,4 @@ class Home extends Component {
   }
 }
 
-Home.propType = {
-  getMovies: PropTypes.func.isRequired
-};
-
-export default connect(null)(Home);
+export default Home;
