@@ -1,0 +1,6 @@
+export const GET_MOVIES = "GET_MOVIES";
+export const GET_MOVIE = "GET_MOVIE";
+export const GET_MOVIE_IMAGES = "GET_MOVIE_IMAGES";
+export const GET_HERO_IMAGE = "GET_HERO_IMAGE";
+export const GET_MOVIE_CREDITS = "GET_MOVIE_CREDITS";
+export const GET_SIMILAR_MOVIES = "GET_SIMILAR_MOVIES";
