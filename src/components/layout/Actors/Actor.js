@@ -1,31 +1,29 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import "./Actor.css";
 
-class Actor extends Component {
-  render() {
-    const { id, character, name, profile_path } = this.props.actor;
+const Actor = props => {
+  const { character, name, profile_path } = props.actor;
 
-    return (
-      <div className="col-4 col-sm-4 col-md-3 col-lg-2">
-        <div className="card">
-          <img
-            className="card-img-top"
-            src={`https://image.tmdb.org/t/p/original${profile_path}`}
-            alt="poster image"
-          />
-          <div className="card-body">
-            <p className="card-text">{name}</p>
-          </div>
+  return (
+    <div className="col-4 col-sm-4 col-md-3 col-lg-2 mx-3 my-3">
+      <div className="card text-center">
+        <img
+          className="card-img-top"
+          src={`https://image.tmdb.org/t/p/original${profile_path}`}
+          alt="actor_image"
+        />
+        <div className="card-body">
+          <p className="card-text font-weight-bold">{name}</p>
+          <p className="card-text">{character}</p>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 Actor.propTypes = {
   actor: PropTypes.object.isRequired
 };
 
-export default connect(null)(Actor);
+export default Actor;

@@ -23,6 +23,15 @@
   height: 100%;
   margin: 0 auto;
   background: rgb(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.movieinfobox-poster {
+  width: 380px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
 }
 
 .movieinfobox-text {

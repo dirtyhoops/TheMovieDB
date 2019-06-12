@@ -1,21 +1,18 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-
-import Spinner from "../Spinner/Spinner";
+import MoviePoster from "../MoviePoster/MoviePoster";
+import MovieInfoText from "../MovieInfoText/MovieInfoText";
 
 import "./MovieInfoBox.css";
 
 class MovieInfoBox extends Component {
   render() {
     const { selectedMovie } = this.props;
-    const { selectedMovieImages } = this.props;
 
     const backgroundImage = `https://image.tmdb.org/t/p/w1280${
       selectedMovie.backdrop_path
     }`;
-
-    console.log("here's the selected movie images, ", selectedMovieImages);
 
     return (
       <div
@@ -27,36 +24,19 @@ class MovieInfoBox extends Component {
         }}
       >
         <div className="movieinfobox-content">
-          <div className="movieposters">
-            <div className="row justify-content-md-center no-gutters pt-3">
-              <div className="col col-lg-2 pt-5 text-center">
-                <img
-                  className="card-img-top posterImg1"
-                  src={`https://image.tmdb.org/t/p/original${
-                    selectedMovie.poster_path
-                  }`}
-                  alt="poster image"
-                />
-              </div>
-              <div className="col col-lg-2 pt-3 text-center">
-                <img
-                  className="card-img-top posterImg2"
-                  src={`https://image.tmdb.org/t/p/original${
-                    selectedMovie.poster_path
-                  }`}
-                  alt="poster image"
-                />
-              </div>
-              <div className="col col-lg-2 pt-5 text-center">
-                <img
-                  className="card-img-top posterImg1"
-                  src={`https://image.tmdb.org/t/p/original${
-                    selectedMovie.poster_path
-                  }`}
-                  alt="poster image"
-                />
-              </div>
-            </div>
+          <div className="movieinfobox-poster">
+            <MoviePoster
+              image={
+                selectedMovie.poster_path
+                  ? `https://image.tmdb.org/t/p/w342${
+                      selectedMovie.poster_path
+                    }`
+                  : "./images/no_image.jpg"
+              }
+            />
+          </div>
+          <div className="movieinfobox-text">
+            <MovieInfoText movieInfo={selectedMovie} />
           </div>
         </div>
       </div>
@@ -65,8 +45,11 @@ class MovieInfoBox extends Component {
 }
 
 MovieInfoBox.propTypes = {
-  selectedMovie: PropTypes.object.isRequired,
-  selectedMovieImages: PropTypes.array.isRequired
+  selectedMovie: PropTypes.object.isRequired
 };
 
-export default connect(null)(MovieInfoBox);
+const mapStateToProps = state => ({
+  selectedMovie: state.movie.selectedMovie
+});
+
+export default connect(mapStateToProps)(MovieInfoBox);

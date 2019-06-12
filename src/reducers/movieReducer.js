@@ -7,13 +7,17 @@ import {
   GET_SIMILAR_MOVIES
 } from "../actions/types";
 
+//gonna see if the currentpage,totalpages,searchterm is gonna work
 const initialState = {
   movies: [],
   selectedMovie: {},
   selectedMovieImages: [],
   heroImage: {},
   movieCredits: {},
-  similarMovies: []
+  similarMovies: [],
+  currentPage: 0,
+  totalPages: 0,
+  searchKeyword: null
 };
 
 // maybe make the selectedMovieImages an ARRAY
@@ -34,11 +38,6 @@ export default function(state = initialState, action) {
       return {
         ...state,
         selectedMovieImages: action.payload
-      };
-    case GET_MOVIE:
-      return {
-        ...state,
-        selectedMovie: action.payload
       };
     case GET_HERO_IMAGE:
       return {

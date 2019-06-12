@@ -4,8 +4,6 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 import AppNavbar from "./components/layout/AppNavbar";
-import MoviesBoard from "./components/layout/MoviesBoard";
-import MovieDetails from "./components/pages/MovieDetails";
 import MovieInfoPage from "./components/pages/MovieInfoPage/MovieInfoPage";
 
 import Home from "./components/pages/Home/Home";
@@ -19,10 +17,7 @@ class App extends Component {
         <Router>
           <div className="App">
             <AppNavbar />
-            {/* <Searchbar /> */}
-
             <Switch>
-              {/* change the moviesboard to home */}
               <Route exact path="/" component={Home} />
               <Route exact path="/movie/:id" component={MovieInfoPage} />
             </Switch>

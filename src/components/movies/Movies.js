@@ -1,42 +1,38 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getMovies } from "../../actions/movieActions";
+import Spinner from "../layout/Spinner/Spinner";
 
 import Movie from "./Movie";
 
 class Movies extends Component {
-  componentDidMount() {
-    this.props.getMovies();
-  }
-
   render() {
     // deconstruct movies from the props
     const { movies } = this.props;
 
-    return (
-      <div className="container-fluid testbackground">
-        <div className="row no-gutters py-3">
-          {movies.map(movie => (
-            <Movie key={movie.id} movie={movie} />
-          ))}
+    if (movies) {
+      console.log("thisis the movies, ", movies);
+      return (
+        <div className="container-fluid">
+          <div className="row no-gutters py-3">
+            {movies.map(movie => (
+              <Movie key={movie.id} movie={movie} />
+            ))}
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return <Spinner />;
+    }
   }
 }
 
 Movies.propType = {
-  movies: PropTypes.array.isRequired,
-  getMovies: PropTypes.func.isRequired
+  movies: PropTypes.array.isRequired
 };
 
 const mapStateToProps = state => ({
   movies: state.movie.movies
 });
 
-export default connect(
-  mapStateToProps,
-  { getMovies }
-)(Movies);
+export default connect(mapStateToProps)(Movies);

@@ -12,10 +12,12 @@ import { API_URL } from "../config";
 
 const apiKey = process.env.REACT_APP_THEMOVIEDB_API;
 
-export const getMovies = () => async dispatch => {
-  const res = await axios.get(
-    `${API_URL}/movie/popular?api_key=${apiKey}&language=en-US&page=1`
-  );
+export const getMovies = endpoint => async dispatch => {
+  // const res = await axios.get(
+  //   `${API_URL}/movie/popular?api_key=${apiKey}&language=en-US&page=1`
+  // );
+
+  const res = await axios.get(endpoint);
   dispatch({
     type: GET_MOVIES,
     payload: res.data.results

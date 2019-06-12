@@ -9,7 +9,6 @@ import {
 } from "../../../actions/movieActions";
 
 import MovieInfoBox from "../../layout/MovieInfoBox/MovieInfoBox";
-import Spinner from "../../layout/Spinner/Spinner";
 import Actors from "../../layout/Actors/Actors";
 import "./MovieInfoPage.css";
 
@@ -23,36 +22,25 @@ class MovieInfoPage extends Component {
   }
 
   render() {
-    const { selectedMovie } = this.props;
-    const { cast, crew } = this.props.movieCredits;
-    const { selectedMovieImages } = this.props;
-
-    if (selectedMovie) {
-      return (
-        <React.Fragment>
-          <div className="wrapper-movieinfopage">
-            <MovieInfoBox
-              selectedMovie={selectedMovie}
-              selectedMovieImages={selectedMovieImages}
-            />
-            <Actors cast={cast} />
-          </div>
-        </React.Fragment>
-      );
-    } else {
-      return <Spinner />;
-    }
+    return (
+      <React.Fragment>
+        <div className="wrapper-movieinfopage">
+          <MovieInfoBox />
+          <Actors />
+        </div>
+      </React.Fragment>
+    );
   }
 }
 
 MovieInfoBox.propTypes = {
-  selectedMovie: PropTypes.object.isRequired
+  getMovie: PropTypes.func,
+  getMovieImages: PropTypes.func,
+  getMovieCredits: PropTypes.func,
+  getSimilarMovies: PropTypes.func
 };
 
 const mapStateToProps = state => ({
-  selectedMovie: state.movie.selectedMovie,
-  selectedMovieImages: state.movie.selectedMovieImages,
-  movieCredits: state.movie.movieCredits,
   similarMovies: state.movie.similarMovies
 });
 

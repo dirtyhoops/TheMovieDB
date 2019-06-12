@@ -11,7 +11,12 @@ class HeroImage extends Component {
   }
 
   render() {
-    const { backdrop_path, title, overview } = this.props.heroImage;
+    const {
+      backdrop_path,
+      title,
+      overview,
+      vote_average
+    } = this.props.heroImage;
 
     return (
       <div
@@ -26,7 +31,10 @@ class HeroImage extends Component {
       >
         <div className="wrapper-heroimage-content">
           <div className="wrapper-heroimage-text">
-            <h1>{title}</h1>
+            <h1>
+              {title} ({vote_average}
+              <i className="fas fa-star" />)
+            </h1>
             <p>{overview}</p>
           </div>
         </div>
