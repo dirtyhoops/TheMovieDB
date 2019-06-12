@@ -6,8 +6,8 @@ const MovieInfoText = props => {
   const {
     title,
     overview,
-    genres,
-    production_countries,
+    // genres,
+    // production_countries,
     runtime,
     vote_average
   } = props.movieInfo;

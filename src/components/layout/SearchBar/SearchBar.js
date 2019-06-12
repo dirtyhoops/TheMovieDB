@@ -5,18 +5,18 @@ import "./SearchBar.css";
 
 class SearchBar extends Component {
   state = {
-    movieName: ""
+    SearchValue: ""
   };
 
   timeout = null;
 
   searchOnChange = e => {
-    this.setState({ movieName: e.target.value });
+    this.setState({ SearchValue: e.target.value });
     clearTimeout(this.timeout);
 
-    // this.timeout = setTimeout(() => {
-    //   this.props.callback(this.state.movieName);
-    // }, 500);
+    this.timeout = setTimeout(() => {
+      this.props.callback(this.state.SearchValue);
+    }, 500);
   };
 
   render() {
@@ -33,7 +33,7 @@ class SearchBar extends Component {
             className="searchbar-input"
             placeholder="Search For a Movie"
             onChange={this.searchOnChange}
-            value={this.state.movieName}
+            value={this.state.SearchValue}
           />
         </div>
       </div>

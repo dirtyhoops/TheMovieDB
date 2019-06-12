@@ -4,13 +4,12 @@ import {
   GET_MOVIE_IMAGES,
   GET_HERO_IMAGE,
   GET_MOVIE_CREDITS,
-  GET_SIMILAR_MOVIES
+  GET_SIMILAR_MOVIES,
+  LOAD_MORE_MOVIES
 } from "./types";
 import axios from "axios";
 
-import { API_URL } from "../config";
-
-const apiKey = process.env.REACT_APP_THEMOVIEDB_API;
+import { API_URL, apiKey } from "../config";
 
 export const getMovies = endpoint => async dispatch => {
   // const res = await axios.get(
@@ -20,8 +19,21 @@ export const getMovies = endpoint => async dispatch => {
   const res = await axios.get(endpoint);
   dispatch({
     type: GET_MOVIES,
-    payload: res.data.results
+    payload: res.data
   });
+  console.log("movie whole json result, ", res.data);
+};
+
+export const loadMoreMovies = endpoint => async dispatch => {
+  const res = await axios.get(endpoint);
+  dispatch({
+    type: LOAD_MORE_MOVIES,
+    payload: res.data
+  });
+  console.log(
+    "movie whole json result after hitting load more movies, ",
+    res.data
+  );
 };
 
 export const getMovie = id => async dispatch => {
