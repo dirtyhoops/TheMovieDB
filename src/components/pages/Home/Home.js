@@ -1,18 +1,19 @@
 import React, { Component } from "react";
-import HeroImage from "../../layout/HeroImage/HeroImage";
-import SearchBar from "../../layout/SearchBar/SearchBar";
-import GenreBar from "../../layout/GenreBar/GenreBar";
-import { apiKey } from "../../../config";
-
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import {
   getMovies,
   loadMoreMovies,
-  getHeroImage
+  getHeroImage,
+  getGenres
 } from "../../../actions/movieActions";
 
-import Movies from "../../movies/Movies";
+import HeroImage from "../../layout/HeroImage/HeroImage";
+import SearchBar from "../../layout/SearchBar/SearchBar";
+import NavBar from "../../layout/NavBar/NavBar";
+import { apiKey } from "../../../config";
+
+import Movies from "../../layout/Movies/Movies";
 import MoreButton from "../../layout/MoreButton/MoreButton";
 
 import "./Home.css";
@@ -28,14 +29,12 @@ import "./Home.css";
 //   10. add a genre inside the navbar and make a separate action for it with the endpoint with genre.
 //   11. make the MOVIEDETAILPAGE PRETTIER
 //   12. maybe clean up the actors page and the movieinfotext. maybe change the const props and make it a class component
-//   13. create a SimilarMovie class so we can add a key
 //   14. make sure to put AppNavBar inside NavBar
 //   15. ADD SOME JQUERY (HOVER ON MOVIES, DISPLAY THE TITLE, RATINGS, AND MAYBE THE OVERVIEW)
+//   16. add a header on top of the movie grid that displays the genre/movielist depends on the movie list
+//   17. add a UPCOMING MOVIE list, and make a "NOT RATED" rating
 
 //   15. MAKE THE NAVBAR, SEARCHBAR STAYS ON TOP OF THE PAGE WHEN THE USER SCROLLS DOWN. SO BASICALLY TAKE OUT THE HEROIMAGE
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// for genre bar, make an API call that calls all the genres, and the pass its ID and its NAME to the genrebar, and inside genrebar, make it <li> and then style it like a navigation bar, maybe a hiding navigation bar on the side
 
 class Home extends Component {
   //do the dispatch right here with the movie
@@ -48,13 +47,27 @@ class Home extends Component {
       `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=20`
     );
     this.props.getHeroImage();
+    this.props.getGenres();
   }
 
-  selectGenre = genre => {
-    let endpoint = `
-    https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&with_genres=${genre}&page=1`;
+  //TRY TO HAVE THIS IN A CASE OR IF STATEMENT, IF SOMETHING IS CLICK THEN IT'S DIFFERENT ENDPOINT
 
-    this.props.getMovies(endpoint);
+  selectGenre = genre => {
+    this.props.getMovies(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&with_genres=${genre}&page=1`
+    );
+  };
+
+  selectPopularMovies = () => {
+    this.props.getMovies(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
+    );
+  };
+
+  selectUpcomingMovies = () => {
+    this.props.getMovies(
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`
+    );
   };
 
   searchMovies = searchKeyword => {
@@ -85,9 +98,16 @@ class Home extends Component {
     return (
       <React.Fragment>
         <div className="wrapper-home">
-          <GenreBar onGenreClick={this.selectGenre} />
+          <NavBar
+            onGenreClick={this.selectGenre}
+            onUpcomingClick={this.selectUpcomingMovies}
+            onPopularClick={this.selectPopularMovies}
+          />
           <HeroImage />
-          <SearchBar callback={this.searchMovies} />
+          <SearchBar
+            callback={this.searchMovies}
+            onGenreClick={this.selectGenre}
+          />
           {/* <NavBar /> */}
           <Movies />
           <MoreButton onClick={this.loadMoreMovies} />
@@ -112,5 +132,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getMovies, loadMoreMovies, getHeroImage }
+  { getMovies, loadMoreMovies, getHeroImage, getGenres }
 )(Home);

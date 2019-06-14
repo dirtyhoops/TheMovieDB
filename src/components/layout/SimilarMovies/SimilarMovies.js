@@ -17,8 +17,8 @@ class SimilarMovies extends Component {
           <h3>Similar Movie</h3>
         </div>
         <div className="row">
-          {similarMovies.slice(0, 8).map(similarMovie => (
-            <div className="col-4 col-sm-4 col-md-3 col-lg-2 my-2">
+          {similarMovies.slice(0, 8).map((similarMovie, index) => (
+            <div key={index} className="col-4 col-sm-4 col-md-3 col-lg-2 my-2">
               <Link
                 to={`/movie/${similarMovie.id}`}
                 onClick={() => this.props.onClick(similarMovie.id)}

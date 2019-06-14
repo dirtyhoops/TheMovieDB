@@ -5,7 +5,8 @@ import {
   GET_HERO_IMAGE,
   GET_MOVIE_CREDITS,
   GET_SIMILAR_MOVIES,
-  LOAD_MORE_MOVIES
+  LOAD_MORE_MOVIES,
+  GET_GENRES
 } from "../actions/types";
 
 //gonna see if the currentpage,totalpages,searchterm is gonna work
@@ -16,6 +17,7 @@ const initialState = {
   heroImage: {},
   movieCredits: {},
   similarMovies: [],
+  movieGenres: [],
   currentPage: 0,
   totalPages: 0
 };
@@ -61,6 +63,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         similarMovies: action.payload
+      };
+    case GET_GENRES:
+      return {
+        ...state,
+        movieGenres: action.payload
       };
 
     default:

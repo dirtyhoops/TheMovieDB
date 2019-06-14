@@ -10,6 +10,7 @@ import {
 
 import MovieInfoBox from "../../layout/MovieInfoBox/MovieInfoBox";
 import Actors from "../../layout/Casts/Casts";
+import NavBar from "../../layout/NavBar/NavBar";
 import "./MovieInfoPage.css";
 import SimilarMovies from "../../layout/SimilarMovies/SimilarMovies";
 
@@ -27,13 +28,13 @@ class MovieInfoPage extends Component {
     // this.props.getMovieImages(id);
     this.props.getMovieCredits(id);
     this.props.getSimilarMovies(id);
-    console.log("clicked similar movie, ID is: ", id);
   };
 
   render() {
     return (
       <React.Fragment>
         <div className="wrapper-movieinfopage">
+          <NavBar />
           <MovieInfoBox />
           <Actors />
           <SimilarMovies onClick={this.selectSimilarMovie} />

@@ -5,17 +5,14 @@ import {
   GET_HERO_IMAGE,
   GET_MOVIE_CREDITS,
   GET_SIMILAR_MOVIES,
-  LOAD_MORE_MOVIES
+  LOAD_MORE_MOVIES,
+  GET_GENRES
 } from "./types";
 import axios from "axios";
 
 import { API_URL, apiKey } from "../config";
 
 export const getMovies = endpoint => async dispatch => {
-  // const res = await axios.get(
-  //   `${API_URL}/movie/popular?api_key=${apiKey}&language=en-US&page=1`
-  // );
-
   const res = await axios.get(endpoint);
   dispatch({
     type: GET_MOVIES,
@@ -80,5 +77,15 @@ export const getSimilarMovies = id => async dispatch => {
   dispatch({
     type: GET_SIMILAR_MOVIES,
     payload: res.data.results
+  });
+};
+
+export const getGenres = () => async dispatch => {
+  const res = await axios.get(
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
+  );
+  dispatch({
+    type: GET_GENRES,
+    payload: res.data.genres
   });
 };

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import Spinner from "../layout/Spinner/Spinner";
+import Spinner from "../Spinner/Spinner";
 
 import Movie from "./Movie";
 
@@ -11,10 +11,9 @@ class Movies extends Component {
     const { movies } = this.props;
 
     if (movies) {
-      console.log("thisis the movies, ", movies);
       return (
         <div className="container-fluid">
-          <div className="row no-gutters py-3">
+          <div className="row no-gutters px-3">
             {movies.map(movie => (
               <Movie key={movie.id} movie={movie} />
             ))}

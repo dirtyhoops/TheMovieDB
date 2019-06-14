@@ -6,7 +6,7 @@ const Movie = props => {
   const { id, poster_path } = props.movie;
 
   return (
-    <div className="col-4 col-sm-4 col-md-3 col-lg-2">
+    <div className="col-4 col-sm-4 col-md-3 col-lg-2 px-1 py-1">
       <Link to={`movie/${id}`}>
         <div className="card carddimension">
           <img
