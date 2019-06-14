@@ -29,7 +29,7 @@ class SimilarMovies extends Component {
                     src={`https://image.tmdb.org/t/p/original${
                       similarMovie.backdrop_path
                     }`}
-                    alt="poster image"
+                    alt="poster-img"
                   />
                 </div>
               </Link>

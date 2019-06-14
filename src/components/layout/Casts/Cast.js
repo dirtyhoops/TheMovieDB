@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Actor.css";
+import "./Cast.css";
 
-const Actor = props => {
-  const { character, name, profile_path } = props.actor;
+const Cast = props => {
+  const { character, name, profile_path } = props.cast;
 
   return (
     <div className="col-4 col-sm-4 col-md-3 col-lg-2 mx-3 my-3">
@@ -15,7 +15,7 @@ const Actor = props => {
               ? `https://image.tmdb.org/t/p/original${profile_path}`
               : "/images/noimage.png"
           }
-          alt="actor_image"
+          alt="cast-img"
         />
         <div className="card-body">
           <p className="card-text font-weight-bold">{name}</p>
@@ -26,8 +26,8 @@ const Actor = props => {
   );
 };
 
-Actor.propTypes = {
-  actor: PropTypes.object.isRequired
+Cast.propTypes = {
+  cast: PropTypes.object.isRequired
 };
 
-export default Actor;
+export default Cast;

@@ -9,7 +9,7 @@ import {
 } from "../../../actions/movieActions";
 
 import MovieInfoBox from "../../layout/MovieInfoBox/MovieInfoBox";
-import Actors from "../../layout/Actors/Actors";
+import Actors from "../../layout/Casts/Casts";
 import "./MovieInfoPage.css";
 import SimilarMovies from "../../layout/SimilarMovies/SimilarMovies";
 
