@@ -5,7 +5,11 @@ import { apiKey } from "../../../config";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getMovies, loadMoreMovies } from "../../../actions/movieActions";
+import {
+  getMovies,
+  loadMoreMovies,
+  getHeroImage
+} from "../../../actions/movieActions";
 
 import Movies from "../../movies/Movies";
 import MoreButton from "../../layout/MoreButton/MoreButton";
@@ -13,17 +17,16 @@ import MoreButton from "../../layout/MoreButton/MoreButton";
 import "./Home.css";
 
 // // @TODO:
-//   1. make the heroimage getHeroImage call here and the fix the HeroImage.js localStorage.
 //   2. make the rating after the title in the hero image PRETTIER, maybe the styling like TMDB
 //   3. move the movies(rename it Movies) folder inside layout
 //   4. rename the Actors/Actor folder to Casts/Cast
 //   5. make a better spinner and make sure everthing that needs to load have an if statement if its not loading, load the spinner
 //   6. put an if statement if currentPage < totalPages === display the button, else, hide it
 //   7. make sure to check if the searchterm result totalpage is less than the total page, and make sure the endpoint is right
-//   8. add a NO_IMAGE image for movies and casts if the poster_path is null
-//   9. make the loadmorebutton and navigation PRETTIER
+//   9. make the navigation PRETTIER
 //   10. add a genre inside the navbar and make a separate action for it with the endpoint with genre.
 //   11. make the MOVIEDETAILPAGE PRETTIER
+//   12. maybe clean up the actors page and the movieinfotext. maybe change the const props and make it a class component
 
 class Home extends Component {
   //do the dispatch right here with the movie
@@ -35,7 +38,7 @@ class Home extends Component {
     this.props.getMovies(
       `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=20`
     );
-    this.setState({ currentPage11: this.currentPage1 });
+    this.props.getHeroImage();
   }
 
   searchMovies = searchKeyword => {
@@ -92,5 +95,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getMovies, loadMoreMovies }
+  { getMovies, loadMoreMovies, getHeroImage }
 )(Home);

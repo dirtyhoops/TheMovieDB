@@ -15,7 +15,7 @@ class Actors extends Component {
       console.log("cast is ", casts);
       return (
         <div className="container-fluid wrapper-actors">
-          <h4>Top Billed Cast</h4>
+          <h3>Top Billed Cast</h3>
           <div className="row justify-content-center no-gutters my-3">
             {casts.slice(0, 10).map(actor => (
               <Actor key={actor.id} actor={actor} />

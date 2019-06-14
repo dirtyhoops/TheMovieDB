@@ -21,7 +21,6 @@ export const getMovies = endpoint => async dispatch => {
     type: GET_MOVIES,
     payload: res.data
   });
-  console.log("movie whole json result, ", res.data);
 };
 
 export const loadMoreMovies = endpoint => async dispatch => {
@@ -30,10 +29,6 @@ export const loadMoreMovies = endpoint => async dispatch => {
     type: LOAD_MORE_MOVIES,
     payload: res.data
   });
-  console.log(
-    "movie whole json result after hitting load more movies, ",
-    res.data
-  );
 };
 
 export const getMovie = id => async dispatch => {

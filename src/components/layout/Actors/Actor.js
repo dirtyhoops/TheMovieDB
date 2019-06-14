@@ -10,7 +10,11 @@ const Actor = props => {
       <div className="card text-center">
         <img
           className="card-img-top"
-          src={`https://image.tmdb.org/t/p/original${profile_path}`}
+          src={
+            profile_path
+              ? `https://image.tmdb.org/t/p/original${profile_path}`
+              : "/images/noimage.png"
+          }
           alt="actor_image"
         />
         <div className="card-body">

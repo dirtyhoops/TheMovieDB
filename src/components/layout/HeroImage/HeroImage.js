@@ -1,15 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getHeroImage } from "../../../actions/movieActions";
 
 import "./HeroImage.css";
 
 class HeroImage extends Component {
-  componentDidMount() {
-    this.props.getHeroImage();
-  }
-
   render() {
     const {
       backdrop_path,
@@ -44,15 +39,11 @@ class HeroImage extends Component {
 }
 
 HeroImage.propTypes = {
-  heroImage: PropTypes.object.isRequired,
-  getHeroImage: PropTypes.func.isRequired
+  heroImage: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
   heroImage: state.movie.heroImage
 });
 
-export default connect(
-  mapStateToProps,
-  { getHeroImage }
-)(HeroImage);
+export default connect(mapStateToProps)(HeroImage);

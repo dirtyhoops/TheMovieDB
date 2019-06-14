@@ -31,7 +31,7 @@ class MovieInfoBox extends Component {
                   ? `https://image.tmdb.org/t/p/w342${
                       selectedMovie.poster_path
                     }`
-                  : "./images/no_image.jpg"
+                  : "/images/posternotfound.png"
               }
             />
           </div>

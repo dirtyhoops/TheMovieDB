@@ -12,15 +12,6 @@ const MovieInfoText = props => {
     vote_average
   } = props.movieInfo;
 
-  // figure out how to map it and why its console logging ran multiple times(5 this time)
-
-  // console.log("genres are, ", genres);
-  // if (genres) {
-  //   const genreList = genres.map(genre => (
-  //     <li key={genre.id}>{genre.name} </li>
-  //   ));
-  // }
-
   return (
     <div>
       <h1>

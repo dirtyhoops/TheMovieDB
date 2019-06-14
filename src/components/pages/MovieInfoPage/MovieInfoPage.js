@@ -11,6 +11,7 @@ import {
 import MovieInfoBox from "../../layout/MovieInfoBox/MovieInfoBox";
 import Actors from "../../layout/Actors/Actors";
 import "./MovieInfoPage.css";
+import SimilarMovies from "../../layout/SimilarMovies/SimilarMovies";
 
 class MovieInfoPage extends Component {
   componentDidMount() {
@@ -21,12 +22,21 @@ class MovieInfoPage extends Component {
     this.props.getSimilarMovies(id);
   }
 
+  selectSimilarMovie = id => {
+    this.props.getMovie(id);
+    // this.props.getMovieImages(id);
+    this.props.getMovieCredits(id);
+    this.props.getSimilarMovies(id);
+    console.log("clicked similar movie, ID is: ", id);
+  };
+
   render() {
     return (
       <React.Fragment>
         <div className="wrapper-movieinfopage">
           <MovieInfoBox />
           <Actors />
+          <SimilarMovies onClick={this.selectSimilarMovie} />
         </div>
       </React.Fragment>
     );
