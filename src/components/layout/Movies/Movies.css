@@ -1,0 +1,36 @@
+.movies-header {
+  color: white;
+  padding: 5px;
+}
+
+.carddimension {
+  position: relative;
+}
+
+.carddimension:hover .movieInfoHover {
+  opacity: 1;
+}
+
+.carddimension img {
+  display: block;
+}
+
+.movieInfoHover {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  background: rgba(42, 42, 43, 0.9);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.movieInfoHover h6 {
+  color: white;
+  font-size: 16px;
+}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Movie = props => {
-  const { id, poster_path } = props.movie;
+  const { id, poster_path, title, vote_average } = props.movie;
 
   return (
     <div className="col-4 col-sm-4 col-md-3 col-lg-2 px-1 py-1">
@@ -18,6 +18,11 @@ const Movie = props => {
             }
             alt="poster_image"
           />
+          <div class="movieInfoHover">
+            <h6>
+              {title} ({vote_average}/10)
+            </h6>
+          </div>
         </div>
       </Link>
     </div>

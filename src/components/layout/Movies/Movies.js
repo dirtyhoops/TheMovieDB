@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Spinner from "../Spinner/Spinner";
 
 import Movie from "./Movie";
+import "./Movies.css";
 
 class Movies extends Component {
   render() {
@@ -13,6 +14,9 @@ class Movies extends Component {
     if (movies) {
       return (
         <div className="container-fluid">
+          <div className="movies-header">
+            <h1>{this.props.movieHeader}</h1>
+          </div>
           <div className="row no-gutters px-3">
             {movies.map(movie => (
               <Movie key={movie.id} movie={movie} />

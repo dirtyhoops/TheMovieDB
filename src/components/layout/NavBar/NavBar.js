@@ -33,23 +33,28 @@ class NavBar extends Component {
 
               {this.props.onUpcomingClick ? (
                 <li
-                  className="nav-item"
+                  className="nav-item nav-link"
                   onClick={() => this.props.onUpcomingClick()}
                 >
-                  <a className="nav-link">
-                    <i className="fas fa-calendar-times" /> Upcoming Movies
-                  </a>
+                  <i className="fas fa-calendar-times" /> Upcoming Movies
+                </li>
+              ) : null}
+
+              {this.props.onPlayingNowClick ? (
+                <li
+                  className="nav-item nav-link"
+                  onClick={() => this.props.onPlayingNowClick()}
+                >
+                  <i className="fas fa-play" /> Playing in Threatres
                 </li>
               ) : null}
 
               {this.props.onPopularClick ? (
                 <li
-                  className="nav-item"
+                  className="nav-item nav-link"
                   onClick={() => this.props.onPopularClick()}
                 >
-                  <a className="nav-link">
-                    <i className="fas fa-star" /> Popular Movies
-                  </a>
+                  <i className="fas fa-star" /> Popular Movies
                 </li>
               ) : null}
 
@@ -58,7 +63,7 @@ class NavBar extends Component {
                   <div class="nav-item dropdown">
                     <a
                       href="#"
-                      class="nav-link dropdown-toggle"
+                      className="nav-link dropdown-toggle"
                       data-toggle="dropdown"
                     >
                       <i className="fas fa-film" /> Select a Genre
