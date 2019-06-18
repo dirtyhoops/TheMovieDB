@@ -1,3 +1,30 @@
 .wrapper-actors {
   background-color: rgb(250, 243, 243);
 }
+
+.header-casts {
+  padding-top: 20px;
+}
+
+.wrapper-card {
+  /* Add shadows to create the "card" effect */
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+
+/* On mouse-over, add a deeper shadow */
+.wrapper-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container-card {
+  padding: 2px 16px;
+}
+
+.wrapper-card img {
+  width: 100%;
+}

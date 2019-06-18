@@ -19,18 +19,20 @@ import MoreButton from "../../layout/MoreButton/MoreButton";
 import "./Home.css";
 
 // // @TODO:
-//   2. make the rating after the title in the hero image PRETTIER, maybe the styling like TMDB
-//   5. make a better spinner and make sure everthing that needs to load have an if statement if its not loading, load the spinner
+//   1. MAYBE ADD THE ADDITIONAL POSTER, BUT RIGHT NOW DONT ADD IT. DELETE EVERYTHING THAT HAS TO DO WITH IT LATER IF YOU DONT USE IT
+//   2. MAKE THE WEBSIDE RESPONSIVE
+//   3. make the rating after the title in the hero image PRETTIER, maybe the styling like TMDB
+//   5. MAKE A BIG SPINNER THAT SAYS MOVIE IS LOADING. make a better spinner and make sure everthing that needs to load have an if statement if its not loading, load the spinner
 //   6. put an if statement if currentPage < totalPages === display the button, else, hide it
 //   7. make sure to check if the searchterm result totalpage is less than the total page, and make sure the endpoint is right -- this is for searched movies, make sure to change the total page number
 //   9. make the navigation PRETTIER
 
 //   11. make the MOVIEDETAILPAGE PRETTIER
 //   12. maybe clean up the actors page and the movieinfotext. maybe change the const props and make it a class component
-//   15. ADD SOME JQUERY (HOVER ON MOVIES, DISPLAY THE TITLE, RATINGS, AND MAYBE THE OVERVIEW)
 //   16. FIX THE MOVIE HEADER WHEN A USER SELECT A GENRE
 
 //   15. MAKE THE NAVBAR, SEARCHBAR STAYS ON TOP OF THE PAGE WHEN THE USER SCROLLS DOWN. SO BASICALLY TAKE OUT THE HEROIMAGE
+//   16. make the navigationbar collapsible when the window is small
 
 class Home extends Component {
   //do the dispatch right here with the movie
@@ -129,11 +131,6 @@ class Home extends Component {
 Home.propType = {
   getMovies: PropTypes.func.isRequired
 };
-
-//@@@@@@@@@@@@@@@ i might need this later, but right now i dont since i dont need the movies[] here
-// const mapStateToProps = state => ({
-//   movies: state.movie.movies
-// });
 
 const mapStateToProps = state => ({
   currentPage: state.movie.currentPage

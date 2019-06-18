@@ -6,10 +6,9 @@ const Cast = props => {
   const { character, name, profile_path } = props.cast;
 
   return (
-    <div className="col-4 col-sm-4 col-md-3 col-lg-2 mx-3 my-3">
-      <div className="card text-center">
+    <div className="col-4 col-sm-3 col-md-3 col-lg-2 my-2">
+      <div className="wrapper-card">
         <img
-          className="card-img-top"
           src={
             profile_path
               ? `https://image.tmdb.org/t/p/original${profile_path}`
@@ -17,9 +16,9 @@ const Cast = props => {
           }
           alt="cast-img"
         />
-        <div className="card-body">
-          <p className="card-text font-weight-bold">{name}</p>
-          <p className="card-text">{character}</p>
+        <div className="container-card">
+          <h6>{name}</h6>
+          <p>{character}</p>
         </div>
       </div>
     </div>

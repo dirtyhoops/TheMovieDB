@@ -1,3 +1,28 @@
-.header-similarMovie {
+.header-similarMovies {
   color: white;
+  padding-top: 20px;
+}
+
+.movie-title-text,
+.movie-rating-text {
+  display: inline-block;
+}
+
+.movie-title-text {
+  width: 85%;
+}
+
+.movie-rating-text {
+  text-align: right;
+  width: 15%;
+}
+
+.card-info-text {
+  color: white;
+  padding: 2px;
+}
+
+.carddimension:hover {
+  opacity: 0.5;
+  transition: 0.7s ease;
 }

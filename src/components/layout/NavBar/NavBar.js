@@ -60,7 +60,7 @@ class NavBar extends Component {
 
               {this.props.onGenreClick ? (
                 <li>
-                  <div class="nav-item dropdown">
+                  <div className="nav-item dropdown">
                     <a
                       href="#"
                       className="nav-link dropdown-toggle"
@@ -70,13 +70,13 @@ class NavBar extends Component {
                     </a>
                     <div className="dropdown-menu">
                       {genres.map((genre, index) => (
-                        <li
+                        <a
                           key={index}
                           onClick={() => this.props.onGenreClick(genre.id)}
                           className="dropdown-item"
                         >
                           {genre.name}
-                        </li>
+                        </a>
                       ))}
                     </div>
                   </div>

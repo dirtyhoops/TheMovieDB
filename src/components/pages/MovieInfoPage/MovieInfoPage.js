@@ -13,6 +13,7 @@ import Actors from "../../layout/Casts/Casts";
 import NavBar from "../../layout/NavBar/NavBar";
 import "./MovieInfoPage.css";
 import SimilarMovies from "../../layout/SimilarMovies/SimilarMovies";
+import AdditionalMoviePosters from "../../layout/AdditionalMoviePosters/AdditionalMoviePosters";
 
 class MovieInfoPage extends Component {
   componentDidMount() {
@@ -25,7 +26,7 @@ class MovieInfoPage extends Component {
 
   selectSimilarMovie = id => {
     this.props.getMovie(id);
-    // this.props.getMovieImages(id);
+    this.props.getMovieImages(id);
     this.props.getMovieCredits(id);
     this.props.getSimilarMovies(id);
   };
@@ -36,6 +37,7 @@ class MovieInfoPage extends Component {
         <div className="wrapper-movieinfopage">
           <NavBar />
           <MovieInfoBox />
+          {/* <AdditionalMoviePosters /> */}
           <Actors />
           <SimilarMovies onClick={this.selectSimilarMovie} />
         </div>
@@ -51,11 +53,7 @@ MovieInfoBox.propTypes = {
   getSimilarMovies: PropTypes.func
 };
 
-const mapStateToProps = state => ({
-  similarMovies: state.movie.similarMovies
-});
-
 export default connect(
-  mapStateToProps,
+  null,
   { getMovie, getMovieImages, getMovieCredits, getSimilarMovies }
 )(MovieInfoPage);

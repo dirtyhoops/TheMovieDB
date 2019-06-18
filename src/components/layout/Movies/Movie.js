@@ -18,7 +18,7 @@ const Movie = props => {
             }
             alt="poster_image"
           />
-          <div class="movieInfoHover">
+          <div className="movieInfoHover">
             <h6>
               {title} ({vote_average}/10)
             </h6>

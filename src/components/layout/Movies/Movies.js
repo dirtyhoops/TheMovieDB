@@ -15,7 +15,7 @@ class Movies extends Component {
       return (
         <div className="container-fluid">
           <div className="movies-header">
-            <h1>{this.props.movieHeader}</h1>
+            <h2>{this.props.movieHeader}</h2>
           </div>
           <div className="row no-gutters px-3">
             {movies.map(movie => (

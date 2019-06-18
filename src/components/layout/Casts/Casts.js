@@ -14,8 +14,11 @@ class Casts extends Component {
     if (casts) {
       return (
         <div className="container-fluid wrapper-actors">
-          <h3>Top Billed Cast</h3>
-          <div className="row justify-content-center no-gutters my-3">
+          <div className="header-casts">
+            <h3>Top Billed Cast</h3>
+          </div>
+
+          <div className="row justify-content-center no-gutters">
             {casts.slice(0, 10).map(cast => (
               <Cast key={cast.id} cast={cast} />
             ))}

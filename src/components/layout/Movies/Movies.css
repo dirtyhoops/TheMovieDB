@@ -5,6 +5,7 @@
 
 .carddimension {
   position: relative;
+  animation: animateMovieCards 4s ease;
 }
 
 .carddimension:hover .movieInfoHover {
@@ -33,4 +34,13 @@
 .movieInfoHover h6 {
   color: white;
   font-size: 16px;
+}
+
+@keyframes animateMovieCards {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
