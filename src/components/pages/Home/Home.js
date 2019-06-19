@@ -28,23 +28,20 @@ import "./Home.css";
 //   9. make the navigation PRETTIER
 
 //   11. make the MOVIEDETAILPAGE PRETTIER
-//   12. maybe clean up the actors page and the movieinfotext. maybe change the const props and make it a class component
 //   16. FIX THE MOVIE HEADER WHEN A USER SELECT A GENRE
 
 //   15. MAKE THE NAVBAR, SEARCHBAR STAYS ON TOP OF THE PAGE WHEN THE USER SCROLLS DOWN. SO BASICALLY TAKE OUT THE HEROIMAGE
-//   16. make the navigationbar collapsible when the window is small
+//   17. fix the comma in the genre
 
 class Home extends Component {
   //do the dispatch right here with the movie
   state = {
     searchKeyword: "",
-    movieHeader: "Popular Movies"
+    movieHeader: ""
   };
 
   componentDidMount() {
-    this.props.getMovies(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=20`
-    );
+    this.selectPlayingNow();
     this.props.getHeroImage();
     this.props.getGenres();
   }

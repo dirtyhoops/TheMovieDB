@@ -1,23 +1,23 @@
 import {
   GET_MOVIES,
   GET_MOVIE,
-  GET_MOVIE_IMAGES,
   GET_HERO_IMAGE,
   GET_MOVIE_CREDITS,
   GET_SIMILAR_MOVIES,
   LOAD_MORE_MOVIES,
-  GET_GENRES
+  GET_GENRES,
+  GET_MOVIE_REVIEWS
 } from "../actions/types";
 
 //gonna see if the currentpage,totalpages,searchterm is gonna work
 const initialState = {
   movies: [],
   selectedMovie: {},
-  selectedMovieImages: [],
   heroImage: {},
   movieCredits: {},
   similarMovies: [],
   movieGenres: [],
+  movieReviews: {},
   currentPage: 0,
   totalPages: 0
 };
@@ -44,11 +44,6 @@ export default function(state = initialState, action) {
         ...state,
         selectedMovie: action.payload
       };
-    case GET_MOVIE_IMAGES:
-      return {
-        ...state,
-        selectedMovieImages: action.payload
-      };
     case GET_HERO_IMAGE:
       return {
         ...state,
@@ -69,6 +64,12 @@ export default function(state = initialState, action) {
         ...state,
         movieGenres: action.payload
       };
+    case GET_MOVIE_REVIEWS: {
+      return {
+        ...state,
+        movieReviews: action.payload
+      };
+    }
 
     default:
       return state;

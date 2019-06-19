@@ -1,8 +1,8 @@
 export const GET_MOVIES = "GET_MOVIES";
 export const GET_MOVIE = "GET_MOVIE";
-export const GET_MOVIE_IMAGES = "GET_MOVIE_IMAGES";
 export const GET_HERO_IMAGE = "GET_HERO_IMAGE";
 export const GET_MOVIE_CREDITS = "GET_MOVIE_CREDITS";
 export const GET_SIMILAR_MOVIES = "GET_SIMILAR_MOVIES";
 export const LOAD_MORE_MOVIES = "LOAD_MORE_MOVIES";
 export const GET_GENRES = "GET_GENRES";
+export const GET_MOVIE_REVIEWS = "GET_MOVIE_REVIEWS";

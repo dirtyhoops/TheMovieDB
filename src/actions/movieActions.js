@@ -1,12 +1,12 @@
 import {
   GET_MOVIES,
   GET_MOVIE,
-  GET_MOVIE_IMAGES,
   GET_HERO_IMAGE,
   GET_MOVIE_CREDITS,
   GET_SIMILAR_MOVIES,
   LOAD_MORE_MOVIES,
-  GET_GENRES
+  GET_GENRES,
+  GET_MOVIE_REVIEWS
 } from "./types";
 import axios from "axios";
 
@@ -35,16 +35,6 @@ export const getMovie = id => async dispatch => {
   dispatch({
     type: GET_MOVIE,
     payload: res.data
-  });
-};
-
-export const getMovieImages = id => async dispatch => {
-  const res = await axios.get(
-    `https://api.themoviedb.org/3/movie/${id}/images?api_key=${apiKey}`
-  );
-  dispatch({
-    type: GET_MOVIE_IMAGES,
-    payload: res.data.posters
   });
 };
 
@@ -87,5 +77,15 @@ export const getGenres = () => async dispatch => {
   dispatch({
     type: GET_GENRES,
     payload: res.data.genres
+  });
+};
+
+export const getMovieReviews = id => async dispatch => {
+  const res = await axios.get(
+    `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${apiKey}`
+  );
+  dispatch({
+    type: GET_MOVIE_REVIEWS,
+    payload: res.data
   });
 };

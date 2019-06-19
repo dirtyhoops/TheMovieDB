@@ -8,14 +8,16 @@ const Cast = props => {
   return (
     <div className="col-4 col-sm-3 col-md-3 col-lg-2 my-2">
       <div className="wrapper-card">
-        <img
-          src={
-            profile_path
-              ? `https://image.tmdb.org/t/p/original${profile_path}`
-              : "/images/noimage.png"
-          }
-          alt="cast-img"
-        />
+        <div className="cast-image-div">
+          <img
+            src={
+              profile_path
+                ? `https://image.tmdb.org/t/p/original${profile_path}`
+                : "/images/noimage.png"
+            }
+            alt="cast-img"
+          />
+        </div>
         <div className="container-card">
           <h6>{name}</h6>
           <p>{character}</p>

@@ -6,8 +6,8 @@ const MovieInfoText = props => {
   const {
     title,
     overview,
-    // genres,
-    // production_countries,
+    genres,
+    production_countries,
     runtime,
     vote_average
   } = props.movieInfo;
@@ -18,11 +18,24 @@ const MovieInfoText = props => {
         {title} ({vote_average}
         <i className="fas fa-star" />)
       </h1>
-      <p>
-        US &#8231; Action &#8231;
-        <span> </span>
-        <i className="far fa-clock" /> {runtime} min
-      </p>
+      <div className="genreTestingdeletethislater">
+        {genres ? (
+          <p>
+            {genres.map((genre, index) => (
+              <span key={index}>{genre.name}, </span>
+            ))}
+          </p>
+        ) : null}
+        {production_countries ? (
+          <p>
+            <span>
+              {production_countries[0].iso_3166_1} &#8231;{" "}
+              <i className="far fa-clock" /> {runtime} min
+            </span>
+          </p>
+        ) : null}
+      </div>
+
       <p>{overview}</p>
     </div>
   );
