@@ -15,7 +15,7 @@ class Casts extends Component {
       return (
         <div className="container-fluid wrapper-actors">
           <div className="header-casts">
-            <h3>Top Billed Cast</h3>
+            <h2>Top Billed Cast</h2>
           </div>
 
           <div className="row justify-content-center no-gutters">

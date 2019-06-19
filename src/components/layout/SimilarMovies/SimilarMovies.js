@@ -12,12 +12,12 @@ class SimilarMovies extends Component {
     return (
       <div className="wrapper-similarMovies container-fluid">
         <div className="header-similarMovies">
-          <h3>Similar Movies</h3>
+          <h2>Similar Movies</h2>
         </div>
 
         <div className="row">
           {similarMovies.slice(0, 8).map((similarMovie, index) => (
-            <div key={index} className="col-4 col-sm-4 col-md-3 col-lg-3 my-2">
+            <div key={index} className="col-6 col-sm-4 col-md-3 col-lg-3 my-2">
               <Link
                 to={`/movie/${similarMovie.id}`}
                 onClick={() => this.props.onClick(similarMovie.id)}

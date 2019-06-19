@@ -7,13 +7,13 @@ import "./Reviews.css";
 class Reviews extends Component {
   render() {
     const { results } = this.props.reviews;
-    console.log("reviews are: ", results);
 
     if (results) {
       return (
         <div className="container-fluid wrapper-reviews">
           <div className="header-reviews">
-            <h3>Movie Reviews</h3>
+            <h2>Movie Reviews</h2>
+            <hr />
           </div>
           <div className="reviews-content">
             {results.map((review, index) => (

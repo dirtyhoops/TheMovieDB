@@ -1,8 +1,25 @@
 .wrapper-reviews {
   background-color: rgb(250, 243, 243);
-  padding: 20px 100px 50px 100px;
 }
 
 .header-reviews {
   padding-top: 20px;
+}
+
+@media screen and (max-width: 720px) {
+  .header-reviews h2 {
+    font-size: 22px;
+  }
+
+  .reviews-content {
+    padding: 5px;
+  }
+
+  .reviews-content h6 {
+    font-size: 15px;
+  }
+  .reviews-content p {
+    font-size: 12px;
+    text-indent: 25px;
+  }
 }

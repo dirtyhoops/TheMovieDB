@@ -23,11 +23,7 @@ class SearchBar extends Component {
     return (
       <div className="wrapper-searchbar">
         <div className="searchbar-content">
-          <FontAwesome
-            className="fa-search iconsearch"
-            name="search"
-            size="2x"
-          />
+          <i className="fas fa-search iconsearch" />
           <input
             type="text"
             className="searchbar-input"

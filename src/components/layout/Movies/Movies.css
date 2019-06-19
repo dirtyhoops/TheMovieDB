@@ -1,6 +1,6 @@
 .movies-header {
   color: white;
-  padding: 5px;
+  padding: 12px 10px 5px 10px;
 }
 
 .carddimension {
@@ -42,5 +42,11 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .movies-header h2 {
+    font-size: 22px;
   }
 }

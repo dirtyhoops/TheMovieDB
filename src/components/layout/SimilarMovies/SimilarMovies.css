@@ -6,6 +6,7 @@
 .movie-title-text,
 .movie-rating-text {
   display: inline-block;
+  vertical-align: top;
 }
 
 .movie-title-text {
@@ -25,4 +26,14 @@
 .carddimension:hover {
   opacity: 0.5;
   transition: 0.7s ease;
+}
+
+@media screen and (max-width: 720px) {
+  .header-similarMovies h2 {
+    font-size: 22px;
+  }
+
+  .card-info-text h6 {
+    font-size: 12px;
+  }
 }

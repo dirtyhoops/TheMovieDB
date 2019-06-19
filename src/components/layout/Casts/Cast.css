@@ -28,3 +28,27 @@
 .wrapper-card img {
   width: 100%;
 }
+
+@media screen and (max-width: 720px) {
+  .wrapper-card {
+    /* Add shadows to create the "card" effect */
+    width: 90%;
+  }
+
+  .header-casts h2 {
+    font-size: 22px;
+  }
+
+  .card-info-text h6 {
+    font-size: 12px;
+  }
+
+  .container-card h6,
+  .container-card p {
+    font-size: 12px;
+  }
+
+  .container-card {
+    padding: 2px;
+  }
+}
