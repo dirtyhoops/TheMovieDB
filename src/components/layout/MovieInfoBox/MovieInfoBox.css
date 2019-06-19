@@ -27,35 +27,29 @@
 }
 
 .movieinfobox-poster {
-  width: 380px;
+  width: 40%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
   left: 0px;
+  display: inline-block;
 }
 
 .movieinfobox-text {
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
-  width: auto;
+  width: 60%;
   padding: 40px;
   color: #fff;
   overflow: hidden;
   box-sizing: border-box;
-  position: absolute;
-  left: 360px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .movieinfobox-text h1 {
   font-family: "Abel", sans-serif;
   font-size: 48px;
   margin: 0;
-}
-
-.movieinfobox-text h3 {
-  font-size: 16px;
-  line-height: 0;
-  margin-top: 30px;
 }
 
 .movieinfobox-text p {
@@ -65,4 +59,48 @@
 }
 
 @media screen and (max-width: 720px) {
+  .wrapper-movieinfobox {
+    height: 230px;
+  }
+
+  .movieinfobox-content {
+    background: 0;
+    color: white;
+    height: auto;
+    padding: 10px;
+    margin-top: -100px;
+  }
+
+  .movieinfobox-poster {
+    width: 40%;
+  }
+
+  .movieinfobox-text {
+    width: 60%;
+    margin-top: 90px;
+    padding: 15px;
+  }
+
+  .movieinfobox-text h1 {
+    font-size: 17px;
+  }
+
+  .movieinfobox-text p {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .movie-overview {
+    margin: 5px 10px;
+  }
+
+  .movie-overview p {
+    font-size: 12px;
+    line-height: 17px;
+    text-indent: 20px;
+  }
+
+  .movie-overview h6 {
+    font-size: 13px;
+  }
 }

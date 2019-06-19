@@ -15,14 +15,15 @@ class MovieInfoBox extends Component {
     }`;
 
     return (
-      <div
-        className="wrapper-movieinfobox"
-        style={{
-          background: selectedMovie.backdrop_path
-            ? `url(${backgroundImage})`
-            : "#fff"
-        }}
-      >
+      <div>
+        <div
+          className="wrapper-movieinfobox"
+          style={{
+            background: selectedMovie.backdrop_path
+              ? `url(${backgroundImage})`
+              : "#fff"
+          }}
+        />
         <div className="movieinfobox-content">
           <div className="movieinfobox-poster">
             <MoviePoster
@@ -37,6 +38,10 @@ class MovieInfoBox extends Component {
           </div>
           <div className="movieinfobox-text">
             <MovieInfoText movieInfo={selectedMovie} />
+          </div>
+          <div className="movie-overview">
+            <h6>Overview</h6>
+            <p>{selectedMovie.overview}</p>
           </div>
         </div>
       </div>

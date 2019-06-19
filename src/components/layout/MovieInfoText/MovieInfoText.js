@@ -35,8 +35,6 @@ const MovieInfoText = props => {
           </p>
         ) : null}
       </div>
-
-      <p>{overview}</p>
     </div>
   );
 };
