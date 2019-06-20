@@ -36,7 +36,13 @@ class SimilarMovies extends Component {
                     <h5>{similarMovie.title}</h5>
                   </div>
                   <div className="movie-rating-text">
-                    <h5>{similarMovie.vote_average}</h5>
+                    <h5>
+                      {similarMovie.vote_average}
+                      <span>
+                        {" "}
+                        <i className="fas fa-star" />
+                      </span>
+                    </h5>
                   </div>
                 </div>
               </Link>

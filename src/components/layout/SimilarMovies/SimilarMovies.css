@@ -10,12 +10,12 @@
 }
 
 .movie-title-text {
-  width: 85%;
+  width: 80%;
 }
 
 .movie-rating-text {
   text-align: right;
-  width: 15%;
+  width: 20%;
 }
 
 .card-info-text {
@@ -30,10 +30,14 @@
 
 @media screen and (max-width: 720px) {
   .header-similarMovies h2 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .card-info-text h5 {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  .movie-rating-text span {
+    font-size: 9px;
   }
 }

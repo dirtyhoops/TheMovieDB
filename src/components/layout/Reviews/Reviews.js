@@ -33,7 +33,7 @@ class Reviews extends Component {
 }
 
 Reviews.propTypes = {
-  result: PropTypes.array.isRequired
+  result: PropTypes.array
 };
 
 const mapStateToProps = state => ({

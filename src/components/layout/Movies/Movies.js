@@ -17,7 +17,7 @@ class Movies extends Component {
           <div className="movies-header">
             <h2>{this.props.movieHeader}</h2>
           </div>
-          <div className="row no-gutters px-3">
+          <div className="row no-gutters px-1">
             {movies.map(movie => (
               <Movie key={movie.id} movie={movie} />
             ))}

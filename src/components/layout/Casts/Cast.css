@@ -44,7 +44,7 @@
   }
 
   .header-casts h2 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .container-card h6 {
@@ -57,5 +57,11 @@
 
   .container-card {
     padding: 2px;
+  }
+
+  .wrapper-card img {
+    height: 130px;
+    object-fit: cover;
+    object-position: 0 10%;
   }
 }
