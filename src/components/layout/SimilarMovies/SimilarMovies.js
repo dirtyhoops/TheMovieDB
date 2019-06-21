@@ -49,27 +49,6 @@ class SimilarMovies extends Component {
             </div>
           ))}
         </div>
-
-        {/* <div className="row">
-          {similarMovies.slice(0, 8).map((similarMovie, index) => (
-            <div key={index} className="col-4 col-sm-4 col-md-3 col-lg-2 my-2">
-              <Link
-                to={`/movie/${similarMovie.id}`}
-                onClick={() => this.props.onClick(similarMovie.id)}
-              >
-                <div className="card carddimension">
-                  <img
-                    className="card-img-top"
-                    src={`https://image.tmdb.org/t/p/original${
-                      similarMovie.backdrop_path
-                    }`}
-                    alt="poster-img"
-                  />
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div> */}
       </div>
     );
   }

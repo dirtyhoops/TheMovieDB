@@ -45,7 +45,7 @@ class NavBar extends Component {
                   className="nav-item nav-link"
                   onClick={() => this.props.onPlayingNowClick()}
                 >
-                  <i className="fas fa-play" /> Playing in Threatres
+                  <i className="fas fa-play" /> Playing in Theatres
                 </li>
               ) : null}
 

@@ -5,7 +5,6 @@ import "./MovieInfoText.css";
 const MovieInfoText = props => {
   const {
     title,
-    overview,
     genres,
     production_countries,
     runtime,

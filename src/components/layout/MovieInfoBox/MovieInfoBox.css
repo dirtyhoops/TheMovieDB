@@ -2,7 +2,7 @@
   background-size: cover !important;
   background-position: center !important;
   width: 100%;
-  height: 500px;
+  height: 400px;
   padding: 40px 20px;
   box-sizing: border-box;
   animation: animateMovieinfo 1s;
@@ -21,22 +21,28 @@
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-
+  font-family: Arial, Helvetica, sans-serif;
   position: relative;
   margin-top: -150px;
 }
 
 .movieinfobox-poster {
   width: 30%;
-  height: 100%;
+  padding: 0 auto;
   overflow: hidden;
-  left: 0px;
   display: inline-block;
+}
+
+.movieinfobox-poster img {
+  width: 500px;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
 }
 
 .movieinfobox-text {
   font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
   width: 70%;
   padding: 40px;
   margin-top: 150px;
@@ -48,18 +54,90 @@
 }
 
 .movieinfobox-text h1 {
-  font-family: "Abel", sans-serif;
-  font-size: 48px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
   margin: 0;
 }
 
-.movieinfobox-text p {
-  font-family: "Abel", sans-serif;
+.movieinfobox-text p,
+.movie-overview p {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 26px;
 }
 
-@media screen and (max-width: 720px) {
+.movie-overview {
+  color: white;
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 10px;
+}
+
+.movie-overview p {
+  text-indent: 2em;
+}
+
+.movie-overview h6 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* laptop retina screens(13 and 15 macbooks) */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .wrapper-movieinfobox {
+    height: 260px;
+  }
+
+  .movieinfobox-content {
+    margin-top: -110px;
+  }
+
+  .movieinfobox-text {
+    margin-top: 95px;
+  }
+
+  .movieinfobox-poster {
+    overflow: hidden;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .movieinfobox-poster img {
+    width: 250px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .movieinfobox-text h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    margin: 0;
+  }
+
+  .movieinfobox-text p,
+  .movie-overview p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 13px;
+  }
+
+  .movie-overview {
+    color: white;
+    padding: 10px 100px;
+  }
+
+  .movie-overview p {
+    text-indent: 2em;
+    line-height: 25px;
+  }
+
+  .movie-overview h6 {
+    font-size: 19px;
+  }
+}
+
+/* FOR MOBILE PHONES (IPHONE 10) */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .wrapper-movieinfobox {
     height: 220px;
   }
@@ -93,7 +171,8 @@
   }
 
   .movie-overview {
-    margin: 5px 10px;
+    padding: 5px 10px;
+    width: 100%;
   }
 
   .movie-overview p {
@@ -106,3 +185,9 @@
     font-size: 14px;
   }
 }
+
+/* iPhone X in landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* FIX IPAD/IPAD PRO RESOLUTIONS TOO */

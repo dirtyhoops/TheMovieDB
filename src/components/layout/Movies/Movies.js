@@ -13,7 +13,7 @@ class Movies extends Component {
 
     if (movies) {
       return (
-        <div className="container-fluid">
+        <div className="wrapper-movies container-fluid">
           <div className="movies-header">
             <h2>{this.props.movieHeader}</h2>
           </div>

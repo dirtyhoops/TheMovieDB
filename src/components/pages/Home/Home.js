@@ -31,7 +31,7 @@ import "./Home.css";
 //   16. FIX THE MOVIE HEADER WHEN A USER SELECT A GENRE
 
 //   15. MAKE THE NAVBAR, SEARCHBAR STAYS ON TOP OF THE PAGE WHEN THE USER SCROLLS DOWN. SO BASICALLY TAKE OUT THE HEROIMAGE
-//   16. REMOVE UNNECESARY CSS FILES
+//   16. REMOVE UNNECESARY CSS FILES. delete them if there's nothing in them and remove the "import" too
 //   17. fix the comma in the genre
 
 class Home extends Component {
@@ -42,7 +42,7 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    this.selectPlayingNow();
+    this.selectPopularMovies();
     this.props.getHeroImage();
     this.props.getGenres();
   }

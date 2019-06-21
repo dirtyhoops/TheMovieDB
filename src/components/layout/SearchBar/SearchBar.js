@@ -26,7 +26,7 @@ class SearchBar extends Component {
           <input
             type="text"
             className="searchbar-input"
-            placeholder="Search For a Movie"
+            placeholder="Search for a movie"
             onChange={this.searchOnChange}
             value={this.state.SearchValue}
           />

@@ -8,7 +8,6 @@
 }
 
 .wrapper-card {
-  /* Add shadows to create the "card" effect */
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -34,12 +33,44 @@
 }
 
 .wrapper-card img {
+  object-fit: cover;
+  height: 250px;
   width: 100%;
+  object-position: 0 10%;
 }
 
-@media screen and (max-width: 720px) {
+/* laptop retina screens(13 and 15 macbooks) */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .wrapper-card {
-    /* Add shadows to create the "card" effect */
+    width: 85%;
+  }
+
+  .header-casts h2 {
+    font-size: 22px;
+  }
+
+  .container-card h6 {
+    font-size: 14px;
+  }
+
+  .container-card p {
+    font-size: 12px;
+  }
+
+  .container-card {
+    padding: 2px;
+  }
+
+  .wrapper-card img {
+    height: 190px;
+    object-fit: cover;
+    object-position: 0 10%;
+  }
+}
+
+/* FOR MOBILE PHONES (IPHONE 10) */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .wrapper-card {
     width: 90%;
   }
 

@@ -1,9 +1,9 @@
 .wrapper-searchbar {
   width: 100%;
-  height: 105px;
+  height: 75px;
   background: #1c1c1c;
   position: relative;
-  padding: 25px 20px 0px 20px;
+  padding: 12px 20px;
   box-sizing: border-box;
   color: #fff;
 }
@@ -11,7 +11,7 @@
 .searchbar-content {
   max-width: 1280px;
   width: 100%;
-  height: 55px;
+  height: 50px;
   background: #353535;
   margin: 0 auto;
   border-radius: 40px;
@@ -31,7 +31,7 @@
   font-size: 38px;
   position: absolute;
   left: 70px;
-  top: 7px;
+  top: 5px;
   border: 0;
   background: transparent;
   height: 40px;
@@ -43,12 +43,41 @@
 }
 
 .iconsearch {
-  font-size: 38px;
+  font-size: 35px;
+  margin-top: -5px;
 }
 
-@media screen and (max-width: 720px) {
+/* laptop retina screens(13 and 15 macbooks) */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .wrapper-searchbar {
-    width: 100%;
+    height: 56px;
+    padding: 9px 20px;
+  }
+
+  .searchbar-content {
+    height: 39px;
+  }
+
+  .fa-search {
+    top: 5px;
+  }
+
+  .searchbar-input {
+    font-size: 25px;
+    left: 50px;
+    top: 2px;
+    height: 35px;
+  }
+
+  .iconsearch {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+}
+
+/* FOR MOBILE PHONES (IPHONE 10) */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .wrapper-searchbar {
     height: 50px;
     padding: 8px 20px;
   }
@@ -58,22 +87,14 @@
   }
 
   .fa-search {
-    position: absolute;
-    left: 20px;
     top: 1px;
-    color: #fff;
   }
 
   .searchbar-input {
-    font-family: "Abel", sans-serif;
     font-size: 18px;
-    position: absolute;
     left: 40px;
     top: 0px;
-    border: 0;
-    background: transparent;
     height: 35px;
-    color: #fff;
   }
 
   .iconsearch {
