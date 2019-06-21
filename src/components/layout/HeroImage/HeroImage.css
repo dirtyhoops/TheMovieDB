@@ -4,7 +4,8 @@
   width: 100%;
   height: 500px;
   position: relative;
-  animation: animateHeroimage 3s;
+
+  animation: animateHeroimage 3s ease;
 }
 
 .wrapper-heroimage:hover {
@@ -75,7 +76,23 @@
   }
 }
 
-/* FOR MOBILE PHONES (IPHONE 10) */
+/* iPad in portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .wrapper-heroimage {
+    height: 350px;
+  }
+
+  .wrapper-heroimage-text h1 {
+    font-size: 25px;
+  }
+
+  .wrapper-heroimage-text p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+/* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .wrapper-heroimage {
     height: 300px;

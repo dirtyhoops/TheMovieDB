@@ -5,7 +5,7 @@
   height: 400px;
   padding: 40px 20px;
   box-sizing: border-box;
-  animation: animateMovieinfo 1s;
+  animation: animateMovieinfoBox 5s ease;
 }
 
 @keyframes animateMovieinfoBox {
@@ -136,7 +136,63 @@
   }
 }
 
-/* FOR MOBILE PHONES (IPHONE 10) */
+/* iPad in portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .wrapper-movieinfobox {
+    height: 250px;
+  }
+
+  .movieinfobox-content {
+    background: 0;
+    color: white;
+    height: auto;
+    padding: 10px;
+    margin-top: -75px;
+  }
+
+  .movieinfobox-poster {
+    width: 40%;
+    text-align: right;
+  }
+
+  .movieinfobox-poster img {
+    width: 220px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .movieinfobox-text {
+    width: 60%;
+    margin-top: 60px;
+    padding: 15px;
+  }
+
+  .movieinfobox-text h1 {
+    font-size: 25px;
+  }
+
+  .movieinfobox-text p,
+  .movie-overview p {
+    font-size: 14px;
+    line-height: 23px;
+    margin: 2px;
+  }
+
+  .movie-overview {
+    padding: 5px 10px;
+    width: 90%;
+  }
+
+  .movie-overview p {
+    text-indent: 25px;
+  }
+
+  .movie-overview h6 {
+    font-size: 19px;
+  }
+}
+
+/* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .wrapper-movieinfobox {
     height: 220px;
@@ -164,7 +220,8 @@
     font-size: 17px;
   }
 
-  .movieinfobox-text p {
+  .movieinfobox-text p,
+  .movie-overview p {
     font-size: 12px;
     line-height: 17px;
     margin: 2px;
@@ -176,8 +233,6 @@
   }
 
   .movie-overview p {
-    font-size: 12px;
-    line-height: 17px;
     text-indent: 20px;
   }
 

@@ -47,6 +47,22 @@
   }
 }
 
+/* iPad in portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .header-similarMovies h2 {
+    font-size: 22px;
+  }
+
+  .card-info-text h5 {
+    font-size: 13px;
+  }
+
+  .movie-rating-text span {
+    font-size: 9px;
+  }
+}
+
+/* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .header-similarMovies h2 {
     font-size: 18px;

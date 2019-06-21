@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-// import PropTypes from "prop-types";
+import "./NavBar.css";
 
 class NavBar extends Component {
   render() {
     const { genres } = this.props;
 
     return (
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4 sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
             TheMovieDB

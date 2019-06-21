@@ -48,7 +48,8 @@
 }
 
 /* laptop retina screens(13 and 15 macbooks) */
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi),
+  /* iPad in portrait */ (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .wrapper-searchbar {
     height: 56px;
     padding: 9px 20px;
@@ -75,7 +76,7 @@
   }
 }
 
-/* FOR MOBILE PHONES (IPHONE 10) */
+/* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .wrapper-searchbar {
     height: 50px;
