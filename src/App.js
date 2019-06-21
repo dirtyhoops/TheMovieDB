@@ -5,6 +5,7 @@ import store from "./store";
 
 import Home from "./components/pages/Home/Home";
 import MovieInfoPage from "./components/pages/MovieInfoPage/MovieInfoPage";
+import PersonProfile from "./components/pages/PersonProfile/PersonProfile";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/movie/:id" component={MovieInfoPage} />
+              <Route exact path="/person/:id" component={PersonProfile} />
             </Switch>
           </div>
         </Router>

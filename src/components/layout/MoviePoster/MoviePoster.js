@@ -5,7 +5,7 @@ import "./MoviePoster.css";
 const MoviePoster = props => {
   const { image } = props;
   return (
-    <div>
+    <div className="movieinfobox-poster">
       <img src={image} alt="main poster" />
     </div>
   );

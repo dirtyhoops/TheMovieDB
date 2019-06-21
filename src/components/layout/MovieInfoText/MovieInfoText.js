@@ -15,7 +15,7 @@ const MovieInfoText = props => {
   } = props.movieInfo;
 
   return (
-    <div>
+    <div className="movieinfobox-text">
       <h1>
         {title} ({vote_average}
         <i className="fas fa-star" />)
@@ -30,11 +30,11 @@ const MovieInfoText = props => {
         ) : null}
         {production_countries ? (
           <p>
-            <span>
-              {production_countries[0].iso_3166_1} &#8231;{" "}
-              <i className="far fa-clock" /> {runtime} min &#8231;{" "}
-              <i className="fas fa-play" /> Play Trailer
-            </span>
+            {production_countries.length > 0 ? (
+              <span> {production_countries[0].iso_3166_1} &#8231; </span>
+            ) : null}
+            <i className="far fa-clock" /> {runtime} min &#8231;{" "}
+            <i className="fas fa-play" /> Play Trailer
           </p>
         ) : null}
         <p>Release Date: {release_date}</p>

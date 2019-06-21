@@ -6,7 +6,9 @@ import {
   GET_SIMILAR_MOVIES,
   LOAD_MORE_MOVIES,
   GET_GENRES,
-  GET_MOVIE_REVIEWS
+  GET_MOVIE_REVIEWS,
+  GET_PERSON,
+  GET_PERSON_MOVIE_CREDITS
 } from "./types";
 import axios from "axios";
 
@@ -87,5 +89,25 @@ export const getMovieReviews = id => async dispatch => {
   dispatch({
     type: GET_MOVIE_REVIEWS,
     payload: res.data
+  });
+};
+
+export const getPerson = id => async dispatch => {
+  const res = await axios.get(
+    `https://api.themoviedb.org/3/person/${id}?api_key=${apiKey}`
+  );
+  dispatch({
+    type: GET_PERSON,
+    payload: res.data
+  });
+};
+
+export const getPersonMovieCredits = id => async dispatch => {
+  const res = await axios.get(
+    `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${apiKey}`
+  );
+  dispatch({
+    type: GET_PERSON_MOVIE_CREDITS,
+    payload: res.data.cast
   });
 };

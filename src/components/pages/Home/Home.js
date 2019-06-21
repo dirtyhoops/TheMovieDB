@@ -117,7 +117,6 @@ class Home extends Component {
             callback={this.searchMovies}
             onGenreClick={this.selectGenre}
           />
-          {/* <NavBar /> */}
           <Movies movieHeader={this.state.movieHeader} />
           <MoreButton onClick={this.loadMoreMovies} />
         </div>

@@ -8,7 +8,7 @@
 }
 
 .wrapper-card {
-  width: 80%;
+  width: 85%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: 0.3s;
@@ -17,7 +17,8 @@
 
 /* On mouse-over, add a deeper shadow */
 .wrapper-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  transition: 0.5 ease;
 }
 
 /* Add some padding inside the card container */
@@ -25,9 +26,7 @@
   padding: 2px 16px;
 }
 
-.container-card h6 {
-  margin: 1px;
-}
+.container-card h6,
 .container-card p {
   margin: 1px;
 }
@@ -62,7 +61,7 @@
   }
 
   .wrapper-card img {
-    height: 190px;
+    height: 200px;
     object-fit: cover;
     object-position: 0 15%;
   }
@@ -97,8 +96,9 @@
   }
 }
 
-/* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+/* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) and IPHONE 6/7/8 for (min-device-width: 375px) and (max-device-width: 812px) */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-width: 375px) and (max-device-width: 812px) {
   .wrapper-card {
     width: 90%;
   }

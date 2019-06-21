@@ -6,7 +6,9 @@ import {
   GET_SIMILAR_MOVIES,
   LOAD_MORE_MOVIES,
   GET_GENRES,
-  GET_MOVIE_REVIEWS
+  GET_MOVIE_REVIEWS,
+  GET_PERSON,
+  GET_PERSON_MOVIE_CREDITS
 } from "../actions/types";
 
 //gonna see if the currentpage,totalpages,searchterm is gonna work
@@ -19,7 +21,9 @@ const initialState = {
   movieGenres: [],
   movieReviews: {},
   currentPage: 0,
-  totalPages: 0
+  totalPages: 0,
+  selectedPerson: {},
+  selectedPersonMovieCredits: []
 };
 
 // maybe make the selectedMovieImages an ARRAY
@@ -70,7 +74,16 @@ export default function(state = initialState, action) {
         movieReviews: action.payload
       };
     }
-
+    case GET_PERSON:
+      return {
+        ...state,
+        selectedPerson: action.payload
+      };
+    case GET_PERSON_MOVIE_CREDITS:
+      return {
+        ...state,
+        selectedPersonMovieCredits: action.payload
+      };
     default:
       return state;
   }

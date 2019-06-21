@@ -25,20 +25,16 @@ class MovieInfoBox extends Component {
           }}
         />
         <div className="movieinfobox-content">
-          <div className="movieinfobox-poster">
-            <MoviePoster
-              image={
-                selectedMovie.poster_path
-                  ? `https://image.tmdb.org/t/p/w342${
-                      selectedMovie.poster_path
-                    }`
-                  : "/images/posternotfound.png"
-              }
-            />
-          </div>
-          <div className="movieinfobox-text">
-            <MovieInfoText movieInfo={selectedMovie} />
-          </div>
+          <MoviePoster
+            image={
+              selectedMovie.poster_path
+                ? `https://image.tmdb.org/t/p/w342${selectedMovie.poster_path}`
+                : "/images/posternotfound.png"
+            }
+          />
+
+          <MovieInfoText movieInfo={selectedMovie} />
+
           <div className="movie-overview">
             <h6>Overview</h6>
             <p>{selectedMovie.overview}</p>

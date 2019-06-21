@@ -1,0 +1,35 @@
+.wrapper-personmovies {
+  max-width: 1600px;
+  margin-top: 15px;
+}
+
+.personmovie-image-container {
+  width: 100%;
+  text-align: center;
+  animation: animateMovieCards 2s ease;
+}
+
+.personmovie-image img {
+  object-fit: cover;
+  width: 100%;
+  box-shadow: 6px 6px 12px #aaa;
+  border: 1px solid rgb(161, 156, 156);
+}
+
+.personmovie-text {
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+.personmovie-text p {
+  margin-top: -5px;
+}
+
+@keyframes animateMovieCards {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
