@@ -10,7 +10,7 @@ class MovieInfoBox extends Component {
   render() {
     const { selectedMovie } = this.props;
 
-    const backgroundImage = `https://image.tmdb.org/t/p/w1280${
+    const backgroundImage = `https://image.tmdb.org/t/p/original${
       selectedMovie.backdrop_path
     }`;
 

@@ -12,11 +12,6 @@ class PersonMovies extends Component {
       return (
         <div className="wrapper-personmovies container-fluid">
           <div className="personmovie-header">
-            {/* use this for hero image */}
-            {selectedPersonMovies[0] ? (
-              <p>{selectedPersonMovies[0].backdrop_path}</p>
-            ) : null}
-
             <h2>Known For</h2>
           </div>
           <div className="row no-gutters px-1">

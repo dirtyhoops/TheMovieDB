@@ -15,7 +15,7 @@ const PersonMovie = props => {
         <div className="personmovie-image-container">
           <div className="personmovie-image">
             <img
-              className="card-img-top"
+              className="card"
               src={
                 poster_path
                   ? `https://image.tmdb.org/t/p/w342${poster_path}`
