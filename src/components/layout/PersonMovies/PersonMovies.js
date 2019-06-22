@@ -12,7 +12,7 @@ class PersonMovies extends Component {
       return (
         <div className="wrapper-personmovies container-fluid">
           <div className="personmovie-header">
-            <h2>Known For</h2>
+            <h2>Movie Roles</h2>
           </div>
           <div className="row no-gutters px-1">
             {selectedPersonMovies.map(personMovie => (

@@ -19,20 +19,10 @@ import MoreButton from "../../layout/MoreButton/MoreButton";
 import "./Home.css";
 
 // // @TODO:
-//   1. MAYBE ADD THE ADDITIONAL POSTER, BUT RIGHT NOW DONT ADD IT. DELETE EVERYTHING THAT HAS TO DO WITH IT LATER IF YOU DONT USE IT
-//   2. MAKE THE WEBSIDE RESPONSIVE
 //   3. make the rating after the title in the hero image PRETTIER, maybe the styling like TMDB
 //   5. MAKE A BIG SPINNER THAT SAYS MOVIE IS LOADING. make a better spinner and make sure everthing that needs to load have an if statement if its not loading, load the spinner
-//   6. put an if statement if currentPage < totalPages === display the button, else, hide it
-//   7. make sure to check if the searchterm result totalpage is less than the total page, and make sure the endpoint is right -- this is for searched movies, make sure to change the total page number
-//   9. make the navigation PRETTIER
-
-//   11. make the MOVIEDETAILPAGE PRETTIER
 //   16. FIX THE MOVIE HEADER WHEN A USER SELECT A GENRE
-
-//   15. MAKE THE NAVBAR, SEARCHBAR STAYS ON TOP OF THE PAGE WHEN THE USER SCROLLS DOWN. SO BASICALLY TAKE OUT THE HEROIMAGE
 //   16. REMOVE UNNECESARY CSS FILES. delete them if there's nothing in them and remove the "import" too
-//   17. fix the comma in the genre
 
 class Home extends Component {
   //do the dispatch right here with the movie
@@ -98,7 +88,6 @@ class Home extends Component {
       "current page in the redux state(starts with 20) is: ",
       parseInt(this.props.currentPage) + 1
     );
-
     this.props.loadMoreMovies(endpoint);
   };
 
@@ -118,7 +107,9 @@ class Home extends Component {
             onGenreClick={this.selectGenre}
           />
           <Movies movieHeader={this.state.movieHeader} />
-          <MoreButton onClick={this.loadMoreMovies} />
+          {this.props.currentPage !== this.props.totalPages ? (
+            <MoreButton onClick={this.loadMoreMovies} />
+          ) : null}
         </div>
       </React.Fragment>
     );
@@ -130,7 +121,8 @@ Home.propType = {
 };
 
 const mapStateToProps = state => ({
-  currentPage: state.movie.currentPage
+  currentPage: state.movie.currentPage,
+  totalPages: state.movie.totalPages
 });
 
 export default connect(

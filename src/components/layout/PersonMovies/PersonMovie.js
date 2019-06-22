@@ -7,10 +7,10 @@ import "./PersonMovies.css";
 const PersonMovie = props => {
   const { id, character, title, poster_path } = props.personMovie;
   return (
-    <div className="col-4 col-sm-4 col-md-3 col-lg-2 px-1 py-2">
+    <div className="col-4 col-sm-4 col-md-3 col-lg-2 px-1">
       <Link
         to={`/movie/${id}`}
-        style={{ textDecoration: "none", color: "black" }}
+        style={{ textDecoration: "none", color: "white" }}
       >
         <div className="personmovie-image-container">
           <div className="personmovie-image">

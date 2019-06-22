@@ -22,9 +22,6 @@ class PersonProfile extends Component {
     return (
       <div className="wrapper-personprofile">
         <NavBar />
-        <div>
-          <p>Go back to movie</p>
-        </div>
         <PersonInfoBox />
         <PersonMovies />
       </div>

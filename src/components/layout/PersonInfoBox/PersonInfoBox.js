@@ -18,15 +18,16 @@ class PersonInfoBox extends Component {
     } = this.props.selectedPerson;
 
     const { selectedPersonMovies } = this.props;
+    const { selectedMovie } = this.props;
 
     return (
       <div className="thewholewrapperwithbackgroundandbigraphy">
         <div
           className="wrapper-personinfobox"
           style={{
-            background: selectedPersonMovies[5]
+            background: selectedMovie
               ? `url(https://image.tmdb.org/t/p/original/${
-                  selectedPersonMovies[5].backdrop_path
+                  selectedMovie.backdrop_path
                 })`
               : "#fff"
           }}
@@ -64,10 +65,12 @@ class PersonInfoBox extends Component {
             </div>
           </div>
         </div>
-        <div className="wrapper-biography">
-          <h2>Biography: </h2>
-          <p>{biography}</p>
-        </div>
+        {biography !== "" ? (
+          <div className="wrapper-biography">
+            <h2>Biography </h2>
+            <p>{biography}</p>
+          </div>
+        ) : null}
       </div>
     );
   }
@@ -75,11 +78,8 @@ class PersonInfoBox extends Component {
 
 const mapStateToProps = state => ({
   selectedPerson: state.movie.selectedPerson,
-  selectedPersonMovies: state.movie.selectedPersonMovieCredits
+  selectedPersonMovies: state.movie.selectedPersonMovieCredits,
+  selectedMovie: state.movie.selectedMovie
 });
 
 export default connect(mapStateToProps)(PersonInfoBox);
-
-{
-  /* use this for hero image */
-}
