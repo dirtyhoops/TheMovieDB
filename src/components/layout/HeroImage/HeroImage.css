@@ -79,6 +79,11 @@
     font-size: 15px;
     line-height: 17px;
   }
+
+  .wrapper-heroimage-text span {
+    font-size: 24px;
+    padding: 5px 0px;
+  }
 }
 
 /* iPad in portrait */
@@ -95,11 +100,16 @@
     font-size: 15px;
     line-height: 20px;
   }
+
+  .wrapper-heroimage-text span {
+    font-size: 19px;
+    padding: 5px 0px;
+  }
 }
 
 /* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) and IPHONE 6/7/8 for (min-device-width: 375px) and (max-device-width: 812px) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-width: 375px) and (max-device-width: 812px) {
+  (min-device-width: 320px) and (max-device-width: 568px) {
   .wrapper-heroimage {
     height: 300px;
   }
@@ -117,5 +127,10 @@
   .wrapper-heroimage-text p {
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .wrapper-heroimage-text span {
+    font-size: 15px;
+    padding: 5px 0px;
   }
 }

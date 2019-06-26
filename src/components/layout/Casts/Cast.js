@@ -8,7 +8,7 @@ const Cast = props => {
   const { character, name, profile_path, id } = props.cast;
 
   return (
-    <div className="col-4 col-sm-3 col-md-3 col-lg-2 my-2">
+    <div className="col-4 col-sm-3 col-md-2 col-lg-2 my-2">
       <Link
         to={`/person/${id}`}
         style={{ textDecoration: "none", color: "black" }}

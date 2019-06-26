@@ -40,6 +40,7 @@ class PersonInfoBox extends Component {
                     ? `https://image.tmdb.org/t/p/w342${profile_path}`
                     : "/images/posternotfound.png"
                 }
+                alt="person_profile_image"
               />
             </div>
             <div className="personinfo-texts">
