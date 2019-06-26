@@ -13,13 +13,11 @@ const MovieInfoText = props => {
     budget
   } = props.movieInfo;
 
-  const { key } = props.movieTrailer;
+  const { movieTrailer } = props;
 
   const { crew } = props.movieCrew;
 
   var directors = [];
-
-  console.log("Director: " + directors.join(", "));
 
   return (
     <div className="movieinfobox-text">
@@ -46,10 +44,10 @@ const MovieInfoText = props => {
           {production_countries.length > 0 ? (
             <span> {production_countries[0].iso_3166_1} &#8231; </span>
           ) : null}
-          <i className="far fa-clock" /> {calcTime(runtime)} &#8231;{" "}
-          {key ? (
-            <a href={`https://www.youtube.com/watch?v=${key}`}>
-              <i className="fas fa-play" /> Play Trailer
+          <i className="far fa-clock" /> {calcTime(runtime)}{" "}
+          {movieTrailer[0] ? (
+            <a href={`https://www.youtube.com/watch?v=${movieTrailer[0].key}`}>
+              &#8231; <i className="fas fa-play" /> Play Trailer
             </a>
           ) : null}
         </p>

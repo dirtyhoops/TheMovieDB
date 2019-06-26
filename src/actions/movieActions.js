@@ -119,6 +119,6 @@ export const getSelectedMovieTrailerLink = id => async dispatch => {
   );
   dispatch({
     type: GET_MOVIE_TRAILER_LINK,
-    payload: res.data.results[0]
+    payload: res.data.results
   });
 };

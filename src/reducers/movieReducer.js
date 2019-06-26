@@ -25,7 +25,7 @@ const initialState = {
   totalPages: 0,
   selectedPerson: {},
   selectedPersonMovieCredits: [],
-  selectedMovieTrailerLink: {}
+  selectedMovieTrailerLink: []
 };
 
 // maybe make the selectedMovieImages an ARRAY
