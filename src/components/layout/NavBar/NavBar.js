@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-import "./NavBar.css";
-
 class NavBar extends Component {
   render() {
     const { genres } = this.props;
@@ -72,7 +70,7 @@ class NavBar extends Component {
                       {genres.map((genre, index) => (
                         <a
                           key={index}
-                          onClick={() => this.props.onGenreClick(genre.id)}
+                          onClick={() => this.props.onGenreClick(genre)}
                           className="dropdown-item"
                         >
                           {genre.name}

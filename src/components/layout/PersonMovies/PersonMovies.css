@@ -6,6 +6,7 @@
 .personmovie-image-container {
   width: 90%;
   text-align: center;
+  margin: 0 auto;
   animation: animateMovieCards 2s ease;
 }
 
@@ -34,6 +35,42 @@
   }
 }
 
+/* laptop retina screens(13 and 15 macbooks) */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .wrapper-personmovies {
+    margin-top: 2px;
+    padding: 5px 40px;
+  }
+
+  .personmovie-image-container {
+    width: 90%;
+  }
+
+  .personmovie-image img {
+    object-fit: cover;
+    width: 92%;
+    box-shadow: 2px 2px 6px rgb(107, 103, 103);
+    border: 1px solid rgb(161, 156, 156);
+  }
+
+  .personmovie-text {
+    padding-top: 8px;
+  }
+
+  .personmovie-text p,
+  .personmovie-text h6 {
+    font-size: 15px;
+  }
+
+  .personmovie-text p {
+    line-height: 16px;
+  }
+
+  .personmovie-header h2 {
+    font-size: 22px;
+  }
+}
+
 /* iPad in portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .wrapper-personmovies {
@@ -42,8 +79,6 @@
 
   .personmovie-image-container {
     width: 90%;
-    text-align: center;
-    animation: animateMovieCards 2s ease;
   }
 
   .personmovie-image img {
@@ -80,8 +115,6 @@
 
   .personmovie-image-container {
     width: 90%;
-    text-align: center;
-    animation: animateMovieCards 2s ease;
   }
 
   .personmovie-image img {

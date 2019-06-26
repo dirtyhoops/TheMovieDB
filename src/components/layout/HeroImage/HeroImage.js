@@ -31,9 +31,12 @@ class HeroImage extends Component {
             <div className="wrapper-heroimage-text">
               <h1>
                 {title} ({vote_average}
-                <i className="fas fa-star" />)
+                <span>
+                  <i className="fas fa-star" />
+                </span>
+                )
               </h1>
-              <p>{overview}</p>
+              <p>){overview}</p>
             </div>
           </div>
         </div>

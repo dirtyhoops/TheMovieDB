@@ -18,12 +18,6 @@ import MoreButton from "../../layout/MoreButton/MoreButton";
 
 import "./Home.css";
 
-// // @TODO:
-//   3. make the rating after the title in the hero image PRETTIER, maybe the styling like TMDB
-//   5. MAKE A BIG SPINNER THAT SAYS MOVIE IS LOADING. make a better spinner and make sure everthing that needs to load have an if statement if its not loading, load the spinner
-//   16. FIX THE MOVIE HEADER WHEN A USER SELECT A GENRE
-//   16. REMOVE UNNECESARY CSS FILES. delete them if there's nothing in them and remove the "import" too
-
 class Home extends Component {
   //do the dispatch right here with the movie
   state = {
@@ -37,13 +31,14 @@ class Home extends Component {
     this.props.getGenres();
   }
 
-  //TRY TO HAVE THIS IN A CASE OR IF STATEMENT, IF SOMETHING IS CLICK THEN IT'S DIFFERENT ENDPOINT
-
   selectGenre = genre => {
     this.props.getMovies(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&with_genres=${genre}&page=1`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&with_genres=${
+        genre.id
+      }&page=1`
     );
-    this.setState({ movieHeader: "SELECTED GENRRE FIX THIS LATER" });
+    const genreName = genre.name;
+    this.setState({ movieHeader: genreName });
   };
 
   selectPopularMovies = () => {

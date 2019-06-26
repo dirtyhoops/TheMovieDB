@@ -1,6 +1,4 @@
 import React from "react";
-
-import "./MovieInfoText.css";
 import { calcTime, convertMoney } from "../../../helpers";
 
 const MovieInfoText = props => {

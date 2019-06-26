@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import "./PersonInfoBox.css";
@@ -19,6 +18,7 @@ class PersonInfoBox extends Component {
 
     const { selectedPersonMovies } = this.props;
     const { selectedMovie } = this.props;
+    console.log("movie credits: ", selectedPersonMovies.length);
 
     return (
       <div className="thewholewrapperwithbackgroundandbigraphy">
@@ -57,7 +57,10 @@ class PersonInfoBox extends Component {
                 Place of Birth: <span>{place_of_birth}</span>
               </p>
               <p>
-                Known Credits: <span>15</span>
+                Known Movie Credits:{" "}
+                <span>
+                  {selectedPersonMovies ? selectedPersonMovies.length : null}
+                </span>
               </p>
               <p>
                 Popularity: <span>{popularity}</span>

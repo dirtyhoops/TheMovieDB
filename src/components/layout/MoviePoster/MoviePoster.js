@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./MoviePoster.css";
-
 const MoviePoster = props => {
   const { image } = props;
   return (
