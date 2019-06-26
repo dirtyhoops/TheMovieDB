@@ -18,7 +18,6 @@ class PersonInfoBox extends Component {
 
     const { selectedPersonMovies } = this.props;
     const { selectedMovie } = this.props;
-    console.log("movie credits: ", selectedPersonMovies.length);
 
     return (
       <div className="thewholewrapperwithbackgroundandbigraphy">

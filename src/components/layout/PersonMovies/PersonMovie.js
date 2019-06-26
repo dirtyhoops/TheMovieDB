@@ -35,7 +35,7 @@ const PersonMovie = props => {
 };
 
 PersonMovie.propTypes = {
-  personMovie: PropTypes.array.isRequired
+  personMovie: PropTypes.object.isRequired
 };
 
 export default PersonMovie;

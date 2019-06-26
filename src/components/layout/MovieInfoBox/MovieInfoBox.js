@@ -55,7 +55,7 @@ class MovieInfoBox extends Component {
 
 MovieInfoBox.propTypes = {
   selectedMovie: PropTypes.object.isRequired,
-  selectedMovieTrailerLink: PropTypes.object.isRequired,
+  selectedMovieTrailerLink: PropTypes.array.isRequired,
   selectedMovieCrew: PropTypes.object.isRequired
 };
 
