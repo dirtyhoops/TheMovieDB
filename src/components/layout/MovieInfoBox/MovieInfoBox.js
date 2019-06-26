@@ -8,7 +8,11 @@ import "./MovieInfoBox.css";
 
 class MovieInfoBox extends Component {
   render() {
-    const { selectedMovie } = this.props;
+    const {
+      selectedMovie,
+      selectedMovieTrailerLink,
+      selectedMovieCrew
+    } = this.props;
 
     const backgroundImage = `https://image.tmdb.org/t/p/original${
       selectedMovie.backdrop_path
@@ -33,7 +37,11 @@ class MovieInfoBox extends Component {
             }
           />
 
-          <MovieInfoText movieInfo={selectedMovie} />
+          <MovieInfoText
+            movieInfo={selectedMovie}
+            movieTrailer={selectedMovieTrailerLink}
+            movieCrew={selectedMovieCrew}
+          />
 
           <div className="movie-overview">
             <h6>Overview</h6>
@@ -46,11 +54,15 @@ class MovieInfoBox extends Component {
 }
 
 MovieInfoBox.propTypes = {
-  selectedMovie: PropTypes.object.isRequired
+  selectedMovie: PropTypes.object.isRequired,
+  selectedMovieTrailerLink: PropTypes.object.isRequired,
+  selectedMovieCrew: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  selectedMovie: state.movie.selectedMovie
+  selectedMovie: state.movie.selectedMovie,
+  selectedMovieTrailerLink: state.movie.selectedMovieTrailerLink,
+  selectedMovieCrew: state.movie.movieCredits
 });
 
 export default connect(mapStateToProps)(MovieInfoBox);

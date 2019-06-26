@@ -5,7 +5,8 @@ import {
   getMovie,
   getMovieCredits,
   getSimilarMovies,
-  getMovieReviews
+  getMovieReviews,
+  getSelectedMovieTrailerLink
 } from "../../../actions/movieActions";
 
 import MovieInfoBox from "../../layout/MovieInfoBox/MovieInfoBox";
@@ -26,6 +27,7 @@ class MovieInfoPage extends Component {
     this.props.getMovieCredits(id);
     this.props.getSimilarMovies(id);
     this.props.getMovieReviews(id);
+    this.props.getSelectedMovieTrailerLink(id);
   };
 
   render() {
@@ -47,10 +49,17 @@ MovieInfoBox.propTypes = {
   getMovie: PropTypes.func,
   getMovieCredits: PropTypes.func,
   getSimilarMovies: PropTypes.func,
-  getMovieReviews: PropTypes.func
+  getMovieReviews: PropTypes.func,
+  getSelectedMovieTrailerLink: PropTypes.func
 };
 
 export default connect(
   null,
-  { getMovie, getMovieCredits, getSimilarMovies, getMovieReviews }
+  {
+    getMovie,
+    getMovieCredits,
+    getSimilarMovies,
+    getMovieReviews,
+    getSelectedMovieTrailerLink
+  }
 )(MovieInfoPage);

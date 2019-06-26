@@ -8,7 +8,8 @@ import {
   GET_GENRES,
   GET_MOVIE_REVIEWS,
   GET_PERSON,
-  GET_PERSON_MOVIE_CREDITS
+  GET_PERSON_MOVIE_CREDITS,
+  GET_MOVIE_TRAILER_LINK
 } from "./types";
 import axios from "axios";
 
@@ -109,5 +110,15 @@ export const getPersonMovieCredits = id => async dispatch => {
   dispatch({
     type: GET_PERSON_MOVIE_CREDITS,
     payload: res.data.cast
+  });
+};
+
+export const getSelectedMovieTrailerLink = id => async dispatch => {
+  const res = await axios.get(
+    `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}`
+  );
+  dispatch({
+    type: GET_MOVIE_TRAILER_LINK,
+    payload: res.data.results[0]
   });
 };

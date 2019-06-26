@@ -8,7 +8,8 @@ import {
   GET_GENRES,
   GET_MOVIE_REVIEWS,
   GET_PERSON,
-  GET_PERSON_MOVIE_CREDITS
+  GET_PERSON_MOVIE_CREDITS,
+  GET_MOVIE_TRAILER_LINK
 } from "../actions/types";
 
 //gonna see if the currentpage,totalpages,searchterm is gonna work
@@ -23,7 +24,8 @@ const initialState = {
   currentPage: 0,
   totalPages: 0,
   selectedPerson: {},
-  selectedPersonMovieCredits: []
+  selectedPersonMovieCredits: [],
+  selectedMovieTrailerLink: {}
 };
 
 // maybe make the selectedMovieImages an ARRAY
@@ -83,6 +85,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         selectedPersonMovieCredits: action.payload
+      };
+    case GET_MOVIE_TRAILER_LINK:
+      return {
+        ...state,
+        selectedMovieTrailerLink: action.payload
       };
     default:
       return state;

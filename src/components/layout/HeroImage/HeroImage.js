@@ -36,7 +36,7 @@ class HeroImage extends Component {
                 </span>
                 )
               </h1>
-              <p>){overview}</p>
+              <p>{overview}</p>
             </div>
           </div>
         </div>
