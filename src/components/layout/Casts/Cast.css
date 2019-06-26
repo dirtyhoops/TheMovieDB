@@ -26,6 +26,11 @@
   padding: 2px 16px;
 }
 
+.wrapper-card:hover {
+  width: 90%;
+  transition: 0.4 ease;
+}
+
 .container-card h6,
 .container-card p {
   margin: 1px;
