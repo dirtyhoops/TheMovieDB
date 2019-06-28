@@ -1,25 +1,26 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import {
   getMovie,
   getMovieCredits,
   getSimilarMovies,
   getMovieReviews,
   getSelectedMovieTrailerLink
-} from "../../../actions/movieActions";
+} from '../../../actions/movieActions';
 
-import MovieInfoBox from "../../layout/MovieInfoBox/MovieInfoBox";
-import Actors from "../../layout/Casts/Casts";
-import NavBar from "../../layout/NavBar/NavBar";
-import "./MovieInfoPage.css";
-import SimilarMovies from "../../layout/SimilarMovies/SimilarMovies";
-import Reviews from "../../layout/Reviews/Reviews";
+import MovieInfoBox from '../../layout/MovieInfoBox/MovieInfoBox';
+import Actors from '../../layout/Casts/Casts';
+import NavBar from '../../layout/NavBar/NavBar';
+import './MovieInfoPage.css';
+import SimilarMovies from '../../layout/SimilarMovies/SimilarMovies';
+import Reviews from '../../layout/Reviews/Reviews';
 
 class MovieInfoPage extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.selectMovie(id);
+    window.scrollTo(0, 0);
   }
 
   selectMovie = id => {
@@ -28,12 +29,13 @@ class MovieInfoPage extends Component {
     this.props.getSimilarMovies(id);
     this.props.getMovieReviews(id);
     this.props.getSelectedMovieTrailerLink(id);
+    window.scrollTo(0, 0);
   };
 
   render() {
     return (
       <React.Fragment>
-        <div className="wrapper-movieinfopage">
+        <div className='wrapper-movieinfopage'>
           <NavBar />
           <MovieInfoBox />
           <Actors />
