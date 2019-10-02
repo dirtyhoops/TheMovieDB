@@ -1,6 +1,15 @@
+.wrapper-similarMovies {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .header-similarMovies {
   color: white;
-  padding-top: 20px;
+  padding-top: 15px;
+}
+
+.header-similarMovies h2 {
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .movie-title-text,
@@ -23,6 +32,10 @@
   padding: 2px;
 }
 
+.card-info-text h5 {
+  font-size: 18px;
+}
+
 .carddimension:hover {
   opacity: 0.5;
   transition: 0.7s ease;
@@ -39,7 +52,7 @@
   }
 
   .card-info-text h5 {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .movie-rating-text span {
@@ -54,7 +67,15 @@
   }
 
   .card-info-text h5 {
-    font-size: 13px;
+    font-size: 14px;
+  }
+
+  .movie-title-text {
+    width: 78%;
+  }
+
+  .movie-rating-text {
+    width: 22%;
   }
 
   .movie-rating-text span {
@@ -70,7 +91,7 @@
   }
 
   .card-info-text h5 {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .movie-rating-text span {

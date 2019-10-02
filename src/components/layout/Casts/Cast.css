@@ -1,10 +1,16 @@
 .wrapper-actors {
   background-color: rgb(250, 243, 243);
   padding-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header-casts {
-  padding-top: 20px;
+  padding-top: 15px;
+}
+
+.header-casts h2 {
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .wrapper-card {
@@ -36,6 +42,14 @@
   margin: 1px;
 }
 
+.container-card h6 {
+  font-size: 18px;
+}
+
+.container-card p {
+  font-size: 17px;
+}
+
 .wrapper-card img {
   object-fit: cover;
   height: 250px;
@@ -58,7 +72,7 @@
   }
 
   .container-card p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .container-card {
@@ -83,11 +97,11 @@
   }
 
   .container-card h6 {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .container-card p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .container-card {

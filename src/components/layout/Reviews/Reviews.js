@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import "./Reviews.css";
+import './Reviews.css';
 
 class Reviews extends Component {
   render() {
@@ -10,19 +10,23 @@ class Reviews extends Component {
 
     if (results) {
       return (
-        <div className="container-fluid wrapper-reviews">
-          <div className="header-reviews">
+        <div className='container-fluid wrapper-reviews'>
+          <div className='header-reviews'>
             <h2>Movie Reviews</h2>
             <hr />
           </div>
-          <div className="reviews-content">
-            {results.map((review, index) => (
-              <div key={index} className="individual-review">
-                <h6>A review by {review.author}</h6>
-                <p>{review.content}</p>
-                <hr />
-              </div>
-            ))}
+          <div className='reviews-content'>
+            {results.length > 0 ? (
+              results.map((review, index) => (
+                <div key={index} className='individual-review'>
+                  <h6>A review by {review.author}</h6>
+                  <p>{review.content}</p>
+                  <hr />
+                </div>
+              ))
+            ) : (
+              <p>This movie has currently no reviews</p>
+            )}
           </div>
         </div>
       );

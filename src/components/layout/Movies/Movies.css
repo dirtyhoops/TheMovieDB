@@ -1,11 +1,17 @@
 .wrapper-movies {
   max-width: 1600px;
   padding-top: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .movies-header {
   color: white;
   padding: 12px 10px 5px 10px;
+}
+
+.movies-header h2 {
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .carddimension {
@@ -28,7 +34,6 @@
   padding: 20px;
   position: absolute;
   background: rgba(42, 42, 43, 0.9);
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +58,7 @@
 /* laptop retina screens(13 and 15 macbooks) */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .movies-header h2 {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 

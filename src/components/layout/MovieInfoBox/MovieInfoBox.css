@@ -21,7 +21,7 @@
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   position: relative;
   margin-top: -150px;
 }
@@ -42,7 +42,6 @@
 }
 
 .movieinfobox-text {
-  font-family: Arial, Helvetica, sans-serif;
   width: 70%;
   padding: 40px;
   margin-top: 150px;
@@ -58,7 +57,6 @@
 }
 
 .movieinfobox-text h1 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 45px;
   margin: 0;
 }
@@ -69,7 +67,6 @@
 
 .movieinfobox-text p,
 .movie-overview p {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 26px;
 }
@@ -78,7 +75,7 @@
   color: white;
   width: 90%;
   margin: 10px auto;
-  padding-bottom: 10px;
+  padding: 0px 0px 10px 0px;
 }
 
 .movie-overview p {
@@ -87,7 +84,6 @@
 
 .movie-overview h6 {
   font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* laptop retina screens(13 and 15 macbooks) */
@@ -117,7 +113,6 @@
   }
 
   .movieinfobox-text h1 {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 27px;
     margin: 0;
   }
@@ -128,14 +123,13 @@
 
   .movieinfobox-text p,
   .movie-overview p {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 13px;
   }
 
   .movie-overview {
     color: white;
-    padding: 10px 100px;
+    padding: 0px 100px 10px 100px;
   }
 
   .movie-overview p {
@@ -230,7 +224,7 @@
   .movieinfobox-text {
     width: 60%;
     margin-top: 60px;
-    padding: 15px;
+    padding: 12px;
   }
 
   .movieinfobox-text h1 {
@@ -249,7 +243,7 @@
   }
 
   .movie-overview {
-    padding: 5px 10px;
+    padding: 0px 10px 5px 10px;
     width: 100%;
   }
 
