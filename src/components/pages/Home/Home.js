@@ -34,9 +34,7 @@ class Home extends Component {
 
   selectGenre = genre => {
     this.props.getMovies(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&with_genres=${
-        genre.id
-      }&page=1`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&with_genres=${genre.id}&page=1`
     );
     const genreName = genre.name;
     this.setState({ movieHeader: genreName });
@@ -60,7 +58,7 @@ class Home extends Component {
     this.props.getMovies(
       `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
     );
-    this.setState({ movieHeader: 'Movies Playing in Threatres' });
+    this.setState({ movieHeader: 'Movies Playing in Threaters' });
   };
 
   searchMovies = searchKeyword => {

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import Spinner from "../Spinner/Spinner";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Spinner from '../Spinner/Spinner';
 
-import Movie from "./Movie";
-import "./Movies.css";
+import Movie from './Movie';
+import './Movies.css';
 
 class Movies extends Component {
   render() {
@@ -13,11 +13,11 @@ class Movies extends Component {
 
     if (movies) {
       return (
-        <div className="wrapper-movies container-fluid">
-          <div className="movies-header">
+        <div className='wrapper-movies container-fluid'>
+          <div className='movies-header'>
             <h2>{this.props.movieHeader}</h2>
           </div>
-          <div className="row no-gutters px-1">
+          <div className='row no-gutters px-1'>
             {movies.map(movie => (
               <Movie key={movie.id} movie={movie} />
             ))}

@@ -1,3 +1,8 @@
 nav li {
   cursor: pointer;
 }
+
+.dropdown-menu {
+  background: rgb(44, 42, 42);
+  color: white;
+}

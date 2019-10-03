@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import "./SearchBar.css";
+import './SearchBar.css';
 
 class SearchBar extends Component {
   state = {
-    SearchValue: ""
+    SearchValue: ''
   };
 
   timeout = null;
@@ -20,13 +20,12 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="wrapper-searchbar">
-        <div className="searchbar-content">
-          <i className="fas fa-search iconsearch" />
+      <div className='wrapper-searchbar'>
+        <div className='searchbar-content'>
           <input
-            type="text"
-            className="searchbar-input"
-            placeholder="Search for a movie"
+            type='text'
+            className='searchbar-input'
+            placeholder='Search for a movie'
             onChange={this.searchOnChange}
             value={this.state.SearchValue}
           />
