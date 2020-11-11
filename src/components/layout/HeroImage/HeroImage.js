@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-import "./HeroImage.css";
+import './HeroImage.css';
 
 class HeroImage extends Component {
   render() {
@@ -18,21 +18,21 @@ class HeroImage extends Component {
     return (
       <Link to={`movie/${id}`}>
         <div
-          className="wrapper-heroimage"
+          className='wrapper-heroimage'
           style={{
-            background: `linear-gradient(to bottom, rgba(0,0,0,0)
-          39%,rgba(0,0,0,0)
-          41%,rgba(0,0,0,0.65)
+            background: `linear-gradient(to bottom, rgba(0,0,0,0.40)
+          45%,rgba(0,0,0,0.40)
+          20%,rgba(0,0,0,0.90)
           100%),
           url(https://image.tmdb.org/t/p/original${backdrop_path})`
           }}
         >
-          <div className="wrapper-heroimage-content">
-            <div className="wrapper-heroimage-text">
+          <div className='wrapper-heroimage-content container'>
+            <div className='wrapper-heroimage-text'>
               <h1>
                 {title} ({vote_average}
                 <span>
-                  <i className="fas fa-star" />
+                  <i className='fas fa-star' />
                 </span>
                 )
               </h1>

@@ -13,14 +13,55 @@ class Movies extends Component {
 
     if (movies) {
       return (
-        <div className='wrapper-movies container-fluid'>
-          <div className='movies-header'>
-            <h2>{this.props.movieHeader}</h2>
-          </div>
-          <div className='row no-gutters px-1'>
-            {movies.map(movie => (
-              <Movie key={movie.id} movie={movie} />
-            ))}
+        <div className='wrapper-movies'>
+          <div className='movies-container container'>
+            <div className='movies-header'>
+              <h2>{this.props.movieHeader}</h2>
+            </div>
+            <div className='movies-grid'>
+              {movies.map(movie => (
+                <Movie key={movie.id} movie={movie} />
+              ))}
+              {movies.length % 6 === 1 && (
+                <>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                </>
+              )}
+
+              {movies.length % 6 === 2 && (
+                <>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                </>
+              )}
+
+              {movies.length % 6 === 3 && (
+                <>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                </>
+              )}
+
+              {movies.length % 6 === 4 && (
+                <>
+                  <div className='movies-grid-spacer'></div>
+                  <div className='movies-grid-spacer'></div>
+                </>
+              )}
+
+              {movies.length % 6 === 5 && (
+                <>
+                  <div className='movies-grid-spacer'></div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       );
