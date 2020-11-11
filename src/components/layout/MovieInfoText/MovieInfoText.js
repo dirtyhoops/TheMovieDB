@@ -86,7 +86,10 @@ const MovieInfoText = props => {
             (window.location.href = `https://www.youtube.com/watch?v=${movieTrailer[0].key}`)
           }
         >
-          <i className='fas fa-play' /> Play Trailer
+          <span className='span-play'>
+            <i className='fas fa-play' />
+          </span>
+          Play Trailer
         </button>
       ) : null}
     </div>
