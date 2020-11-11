@@ -1,5 +1,5 @@
-import React from "react";
-import { calcTime, convertMoney } from "../../../helpers";
+import React from 'react';
+import { calcTime, convertMoney } from '../../../helpers';
 
 const MovieInfoText = props => {
   const {
@@ -10,7 +10,8 @@ const MovieInfoText = props => {
     vote_average,
     release_date,
     revenue,
-    budget
+    budget,
+    overview
   } = props.movieInfo;
 
   const { movieTrailer } = props;
@@ -20,17 +21,19 @@ const MovieInfoText = props => {
   var directors = [];
 
   return (
-    <div className="movieinfobox-text">
-      <h1>
-        {title} ({vote_average}
-        <span className="span-star">
-          <i className="fas fa-star" />
-        </span>
-        )
-      </h1>
+    <div className='movieinfobox2-text'>
+      <div className='movieinfobox2-text-header'>
+        <p className='movieinfobox2-text-title'>{title}</p>
+        <p className='movieinfobox2-text-star'>
+          {vote_average}
+          <span class='span-star'>
+            <i class='far fa-star'></i>
+          </span>
+        </p>
+      </div>
 
       {genres ? (
-        <p>
+        <p className='movieinfobox2-text-genre'>
           {genres.map((genre, index) => (
             <span key={index}>
               {genre.name}
@@ -39,34 +42,53 @@ const MovieInfoText = props => {
           ))}
         </p>
       ) : null}
+
       {production_countries ? (
-        <p>
+        <p className='movieinfobox2-text-country'>
           {production_countries.length > 0 ? (
             <span> {production_countries[0].iso_3166_1} &#8231; </span>
           ) : null}
-          <i className="far fa-clock" /> {calcTime(runtime)}{" "}
-          {movieTrailer[0] ? (
-            <a href={`https://www.youtube.com/watch?v=${movieTrailer[0].key}`}>
-              &#8231; <i className="fas fa-play" /> Play Trailer
-            </a>
-          ) : null}
+          <span className='span-clock'>
+            <i className='far fa-clock' />
+          </span>{' '}
+          {calcTime(runtime)} &#8231; <span>{release_date}</span>
         </p>
       ) : null}
-      <p>Release Date: {release_date}</p>
+
+      <p className='movieinfobox2-text-overview'> {overview}</p>
       {crew
-        ? crew.forEach(function(entry) {
-            if (entry.job === "Director") {
+        ? crew.forEach(function (entry) {
+            if (entry.job === 'Director') {
               directors.push(entry.name);
             }
           })
         : null}
-      <p>Directed By: {directors.join(", ")}</p>
-      <p>
-        <i className="fa fa-money-bill-alt" /> Budget: {convertMoney(budget)}
+      <p className='movieinfobox2-text-director'>
+        Directed By: {directors.join(', ')}
       </p>
-      <p>
-        <i className="fa fa-ticket-alt" /> Revenue: {convertMoney(revenue)}
+      <p className='movieinfobox2-text-director'>
+        <span className='span-bill'>
+          <i className='fa fa-money-bill-alt' />
+        </span>{' '}
+        Budget: {convertMoney(budget)}
       </p>
+      <p className='movieinfobox2-text-director'>
+        <span className='span-bill'>
+          <i className='fa fa-ticket-alt' />
+        </span>{' '}
+        Revenue: {convertMoney(revenue)}
+      </p>
+
+      {movieTrailer[0] ? (
+        <button
+          className='button-trailer'
+          onClick={() =>
+            (window.location.href = `https://www.youtube.com/watch?v=${movieTrailer[0].key}`)
+          }
+        >
+          <i className='fas fa-play' /> Play Trailer
+        </button>
+      ) : null}
     </div>
   );
 };
