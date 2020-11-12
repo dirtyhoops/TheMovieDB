@@ -1,15 +1,105 @@
-.wrapper-movieinfobox {
-  background-size: cover !important;
-  background-position: center !important;
-  width: 100%;
-  height: 400px;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  animation: animateMovieinfoBox 5s ease;
-}
-
 .movieinfobox-wrapper {
   background: #121620;
+}
+
+.movieinfobox2-content {
+  padding: 50px 15px;
+  display: flex;
+  width: 100%;
+  color: white;
+}
+
+.movieinfobox2-poster {
+  flex: 0 0 25%;
+}
+
+.movieinfobox2-poster img {
+  width: 100%;
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid rgb(41, 34, 34);
+  box-shadow: 5px 5px 10px rgba(95, 91, 91, 0.1);
+}
+
+.movieinfobox2-text {
+  flex: 0 0 75%;
+  padding-left: 40px;
+}
+
+.movieinfobox2-text-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movieinfobox2-text-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.movieinfobox2-text-star {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  flex: 0 0 9%;
+  text-align: right;
+}
+
+.span-star {
+  font-size: 18px;
+  margin-left: 5px;
+  color: gold;
+}
+
+.span-clock {
+  font-size: 13px;
+}
+
+.movieinfobox2-text-genre {
+  font-weight: 500;
+  color: rgb(221, 213, 213);
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.movieinfobox2-text-country {
+  font-weight: 500;
+  color: rgb(221, 213, 213);
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.movieinfobox2-text-overview {
+  font-size: 16px;
+  /* line-height: 1.6; */
+  color: rgb(196, 167, 167);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.movieinfobox2-text-director {
+  font-weight: 500;
+  color: rgb(221, 213, 213);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.button-trailer {
+  padding: 10px 30px;
+  color: white;
+  border: 0;
+  border-radius: 25px;
+  background-color: rgb(243, 70, 70);
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.span-play {
+  font-size: 11px;
+  margin-right: 5px;
 }
 
 @keyframes animateMovieinfoBox {
@@ -19,75 +109,6 @@
   to {
     opacity: 1;
   }
-}
-
-.movieinfobox-content {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
-  position: relative;
-  margin-top: -150px;
-}
-
-.movieinfobox-poster {
-  width: 30%;
-  padding: 0 auto;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.movieinfobox-poster img {
-  width: 500px;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  box-sizing: border-box;
-}
-
-.movieinfobox-text {
-  width: 70%;
-  padding: 40px;
-  margin-top: 150px;
-  color: #fff;
-  overflow: hidden;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.movieinfobox-text a {
-  color: white;
-}
-
-.movieinfobox-text h1 {
-  font-size: 45px;
-  margin: 0;
-}
-
-.span-star {
-  font-size: 32px;
-}
-
-.movieinfobox-text p,
-.movie-overview p {
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.movie-overview {
-  color: white;
-  width: 90%;
-  margin: 10px auto;
-  padding: 0px 0px 10px 0px;
-}
-
-.movie-overview p {
-  text-indent: 2em;
-}
-
-.movie-overview h6 {
-  font-size: 25px;
 }
 
 /* laptop retina screens(13 and 15 macbooks) */
@@ -261,103 +282,3 @@
 }
 
 /* FIX IPAD/IPAD PRO RESOLUTIONS TOO */
-
-.movieinfobox2-content {
-  padding: 50px 15px;
-  display: flex;
-  width: 100%;
-  color: white;
-}
-
-.movieinfobox2-poster {
-  flex: 0 0 25%;
-}
-
-.movieinfobox2-poster img {
-  width: 100%;
-  background-size: cover;
-  border-radius: 10px;
-  border: 1px solid rgb(54, 38, 38);
-  box-shadow: 5px 5px 10px rgba(95, 91, 91, 0.1);
-}
-
-.movieinfobox2-text {
-  flex: 0 0 75%;
-  padding-left: 40px;
-}
-
-.movieinfobox2-text-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.movieinfobox2-text-title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 4px;
-}
-
-.movieinfobox2-text-star {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1;
-  flex: 0 0 9%;
-  text-align: right;
-}
-
-.span-star {
-  font-size: 18px;
-  margin-left: 5px;
-  color: gold;
-}
-
-.span-clock {
-  font-size: 13px;
-}
-
-.movieinfobox2-text-genre {
-  font-weight: 500;
-  color: rgb(221, 213, 213);
-  font-size: 16px;
-  margin-bottom: 0px;
-}
-
-.movieinfobox2-text-country {
-  font-weight: 500;
-  color: rgb(221, 213, 213);
-  font-size: 16px;
-  margin-bottom: 0px;
-}
-
-.movieinfobox2-text-overview {
-  font-size: 16px;
-  /* line-height: 1.6; */
-  color: rgb(196, 167, 167);
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.movieinfobox2-text-director {
-  font-weight: 500;
-  color: rgb(221, 213, 213);
-  font-size: 16px;
-  margin-bottom: 4px;
-}
-
-.button-trailer {
-  padding: 10px 30px;
-  color: white;
-  border: 0;
-  border-radius: 25px;
-  background-color: rgb(243, 70, 70);
-  font-weight: 500;
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-.span-play {
-  font-size: 11px;
-  margin-right: 5px;
-}

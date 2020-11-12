@@ -12,9 +12,11 @@ class SimilarMovies extends Component {
     return (
       <div className='similarMovies-wrapper'>
         <div className='similarMovies-container container'>
-          <div className='similarMovies-header'>
-            <p>SIMILAR MOVIES</p>
-          </div>
+          {similarMovies.length > 0 && (
+            <div className='similarMovies-header'>
+              <p>SIMILAR MOVIES</p>
+            </div>
+          )}
 
           <div className='similarMovies-grid'>
             {similarMovies.slice(0, 8).map((similarMovie, index) => (

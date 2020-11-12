@@ -16,7 +16,7 @@ class Movies extends Component {
         <div className='wrapper-movies'>
           <div className='movies-container container'>
             <div className='movies-header'>
-              <h2>{this.props.movieHeader}</h2>
+              <p>{this.props.movieHeader}</p>
             </div>
             <div className='movies-grid'>
               {movies.map(movie => (

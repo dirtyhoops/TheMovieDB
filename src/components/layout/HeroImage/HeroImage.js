@@ -27,16 +27,18 @@ class HeroImage extends Component {
           url(https://image.tmdb.org/t/p/original${backdrop_path})`
           }}
         >
-          <div className='wrapper-heroimage-content container'>
-            <div className='wrapper-heroimage-text'>
-              <h1>
-                {title} ({vote_average}
-                <span>
-                  <i className='fas fa-star' />
-                </span>
-                )
-              </h1>
-              <p>{overview}</p>
+          <div className='heroimage-content container'>
+            <div className='heroimage-text'>
+              <div className='heroimage-text-flex'>
+                <p className='heroimage-text-title'>{title}</p>
+                <p className='heroimage-text-average'>
+                  {vote_average}
+                  <span className='span-star3'>
+                    <i className='far fa-star' />
+                  </span>
+                </p>
+              </div>
+              <p className='heroimage-text-overview'>{overview}</p>
             </div>
           </div>
         </div>
