@@ -1,53 +1,50 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import "./SimilarMovies.css";
+import './SimilarMovies.css';
 
 class SimilarMovies extends Component {
   render() {
     const { similarMovies } = this.props;
 
     return (
-      <div className="wrapper-similarMovies container-fluid">
-        <div className="header-similarMovies">
-          <h2>Similar Movies</h2>
-        </div>
+      <div className='similarMovies-wrapper'>
+        <div className='similarMovies-container container'>
+          <div className='similarMovies-header'>
+            <p>SIMILAR MOVIES</p>
+          </div>
 
-        <div className="row">
-          {similarMovies.slice(0, 8).map((similarMovie, index) => (
-            <div key={index} className="col-6 col-sm-4 col-md-3 col-lg-3 my-2">
-              <Link
-                to={`/movie/${similarMovie.id}`}
-                onClick={() => this.props.onClick(similarMovie.id)}
-              >
-                <div className="card carddimension">
-                  <img
-                    className="card-img-top"
-                    src={`https://image.tmdb.org/t/p/original${
-                      similarMovie.backdrop_path
-                    }`}
-                    alt="poster-img"
-                  />
-                </div>
-                <div className="card-info-text">
-                  <div className="movie-title-text">
-                    <h5>{similarMovie.title}</h5>
+          <div className='similarMovies-grid'>
+            {similarMovies.slice(0, 8).map((similarMovie, index) => (
+              <div key={index} className='similarMovies-grid-box'>
+                <Link
+                  to={`/movie/${similarMovie.id}`}
+                  onClick={() => this.props.onClick(similarMovie.id)}
+                >
+                  <div className='similarMovies-card'>
+                    <img
+                      src={`https://image.tmdb.org/t/p/original${similarMovie.backdrop_path}`}
+                      alt='poster-img'
+                    />
                   </div>
-                  <div className="movie-rating-text">
-                    <h5>
+                  <div className='similarMovies-info'>
+                    <p className='similarMovies-text-title'>
+                      {similarMovie.title}
+                    </p>
+
+                    <p className='similarMovies-text-average'>
                       {similarMovie.vote_average}
                       <span>
-                        {" "}
-                        <i className="fas fa-star" />
+                        <i class='far fa-star span-star2'></i>
                       </span>
-                    </h5>
+                    </p>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );

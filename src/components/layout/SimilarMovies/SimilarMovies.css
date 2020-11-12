@@ -1,15 +1,68 @@
-.wrapper-similarMovies {
+.similarMovies-wrapper {
   font-family: 'Montserrat', sans-serif;
+  background: #121620;
+  padding: 20px 0 70px 0;
 }
 
-.header-similarMovies {
-  color: white;
+.similarMovies-container {
+}
+
+.similarMovies-header {
   padding-top: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.header-similarMovies h2 {
+.similarMovies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.similarMovies-grid-box {
+  flex: 0 0 24%;
+  margin-bottom: 12px;
+}
+
+.similarMovies-card {
+  /* width: 100%; */
+}
+
+.similarMovies-card img {
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid rgb(59, 41, 41);
+  box-shadow: 5px 5px 10px rgba(95, 91, 91, 0.1);
+}
+
+.similarMovies-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  align-items: top;
+}
+
+.similarMovies-text-title {
+  color: rgb(190, 165, 165);
   font-weight: 600;
-  font-size: 30px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.similarMovies-text-average {
+  flex: 0 0 20%;
+  font-size: 14px;
+  text-align: right;
+  font-weight: 600;
+  color: rgb(190, 165, 165);
+}
+
+.span-star2 {
+  color: gold;
+  margin-left: 3px;
+  font-size: 13px;
 }
 
 .movie-title-text,

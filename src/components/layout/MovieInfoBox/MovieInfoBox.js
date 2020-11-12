@@ -17,7 +17,7 @@ class MovieInfoBox extends Component {
     const backgroundImage = `https://image.tmdb.org/t/p/original${selectedMovie.backdrop_path}`;
 
     return (
-      <div>
+      <div className='movieinfobox-wrapper'>
         {/* <div
           className='wrapper-movieinfobox'
           style={{

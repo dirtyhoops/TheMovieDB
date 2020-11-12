@@ -8,6 +8,10 @@
   animation: animateMovieinfoBox 5s ease;
 }
 
+.movieinfobox-wrapper {
+  background: #121620;
+}
+
 @keyframes animateMovieinfoBox {
   from {
     opacity: 0;
@@ -259,7 +263,7 @@
 /* FIX IPAD/IPAD PRO RESOLUTIONS TOO */
 
 .movieinfobox2-content {
-  padding: 50px 0;
+  padding: 50px 15px;
   display: flex;
   width: 100%;
   color: white;
@@ -274,7 +278,7 @@
   background-size: cover;
   border-radius: 10px;
   border: 1px solid rgb(54, 38, 38);
-  box-shadow: 5px 5px 10px rgba(95, 91, 91, 0.04);
+  box-shadow: 5px 5px 10px rgba(95, 91, 91, 0.1);
 }
 
 .movieinfobox2-text {

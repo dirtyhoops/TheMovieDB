@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import Spinner from "../Spinner/Spinner";
-import Cast from "./Cast";
-import "./Cast.css";
+import Spinner from '../Spinner/Spinner';
+import Cast from './Cast';
+import './Cast.css';
 
 class Casts extends Component {
   render() {
@@ -13,15 +13,21 @@ class Casts extends Component {
 
     if (casts) {
       return (
-        <div className="container-fluid wrapper-actors">
-          <div className="header-casts">
-            <h2>Top Billed Cast</h2>
-          </div>
+        <div className='actors-wrapper'>
+          <div className='actors-container container'>
+            <div className='actors-header'>
+              <p>TOP BILLED CAST</p>
+            </div>
 
-          <div className="row justify-content-center no-gutters">
-            {casts.slice(0, 10).map(cast => (
-              <Cast key={cast.id} cast={cast} />
-            ))}
+            <div className='actors-grid'>
+              {casts.slice(0, 10).map(cast => (
+                <Cast key={cast.id} cast={cast} />
+              ))}
+              <div className='actors-grid-box-spacer'></div>
+              <div className='actors-grid-box-spacer'></div>
+              <div className='actors-grid-box-spacer'></div>
+              <div className='actors-grid-box-spacer'></div>
+            </div>
           </div>
         </div>
       );
