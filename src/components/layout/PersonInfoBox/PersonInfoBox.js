@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import "./PersonInfoBox.css";
+import './PersonInfoBox.css';
 
 class PersonInfoBox extends Component {
   render() {
@@ -20,60 +20,48 @@ class PersonInfoBox extends Component {
     const { selectedMovie } = this.props;
 
     return (
-      <div className="thewholewrapperwithbackgroundandbigraphy">
-        <div
-          className="wrapper-personinfobox"
-          style={{
-            background: selectedMovie
-              ? `url(https://image.tmdb.org/t/p/original/${
-                  selectedMovie.backdrop_path
-                })`
-              : "#fff"
-          }}
-        >
-          <div className="personinfo-content">
-            <div className="personinfo-image">
-              <img
-                src={
-                  profile_path
-                    ? `https://image.tmdb.org/t/p/w342${profile_path}`
-                    : "/images/posternotfound.png"
-                }
-                alt="person_profile_image"
-              />
-            </div>
-            <div className="personinfo-texts">
-              <h1>{name}</h1>
-              <p>
-                Known For: <span>{known_for_department}</span>
-              </p>
-              <p>
-                Gender: <span>{gender === 1 ? "Female" : "Male"}</span>
-              </p>
-              <p>
-                Birthday: <span>{birthday}</span>
-              </p>
-              <p>
-                Place of Birth: <span>{place_of_birth}</span>
-              </p>
-              <p>
-                Known Movie Credits:{" "}
-                <span>
-                  {selectedPersonMovies ? selectedPersonMovies.length : null}
-                </span>
-              </p>
-              <p>
-                Popularity: <span>{popularity}</span>
-              </p>
-            </div>
+      <div className='personinfobox-wrapper'>
+        <div className='personinfobox-content container'>
+          <div className='personinfobox-content-poster'>
+            <img
+              src={
+                profile_path
+                  ? `https://image.tmdb.org/t/p/w342${profile_path}`
+                  : '/images/posternotfound.png'
+              }
+              alt='person_profile_image'
+            />
+          </div>
+
+          <div className='personinfobox-content-info'>
+            <p className='personinfobox-text-name'>{name}</p>
+            <p className='personinfobox-text-info'>
+              Known For: <span>{known_for_department}</span>
+            </p>
+            <p className='personinfobox-text-info'>
+              Gender: <span>{gender === 1 ? 'Female' : 'Male'}</span>
+            </p>
+            <p className='personinfobox-text-info'>
+              Birthday: <span>{birthday}</span>
+            </p>
+            <p className='personinfobox-text-info'>
+              Place of Birth: <span>{place_of_birth}</span>
+            </p>
+            <p className='personinfobox-text-info'>
+              Known Movie Credits:{' '}
+              <span>
+                {selectedPersonMovies ? selectedPersonMovies.length : null}
+              </span>
+            </p>
+
+            {biography !== '' ? (
+              <div className='wrapper-biography'>
+                <p className='personinfobox-text-biographyheader'>Biography </p>
+                <p className='personinfobox-text-biography'>{biography}</p>
+              </div>
+            ) : null}
           </div>
         </div>
-        {biography !== "" ? (
-          <div className="wrapper-biography">
-            <h2>Biography </h2>
-            <p>{biography}</p>
-          </div>
-        ) : null}
       </div>
     );
   }

@@ -13,7 +13,7 @@ class PersonMovies extends Component {
         <div className='personmovie-wrapper'>
           <div className='personmovie-container container'>
             <div className='personmovie-header'>
-              <h2>Movie Roles</h2>
+              <p>MOVIE ROLES</p>
             </div>
             <div className='personmovie-grid'>
               {selectedPersonMovies.map(personMovie => (

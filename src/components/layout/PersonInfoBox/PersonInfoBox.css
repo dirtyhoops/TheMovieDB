@@ -1,67 +1,56 @@
-.wrapper-personinfobox {
-  background-size: cover !important;
-  background-position: center !important;
-  width: 100%;
-  height: 600px;
-  padding: 35px 20px;
-  box-sizing: border-box;
+.personinfobox-wrapper {
 }
 
-.personinfo-content {
-  max-width: 1280px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: rgb(0, 0, 0, 0.7);
+.personinfobox-content {
+  padding: 50px 15px;
+  display: flex;
+  width: 100%;
   color: white;
-  margin: 0 auto;
-  height: 530px;
 }
 
-.personinfo-image {
-  width: 30%;
-  display: inline-block;
-  overflow: hidden;
-  box-sizing: border-box;
-  text-align: right;
+.personinfobox-content-poster {
+  flex: 0 0 25%;
 }
 
-.personinfo-image img {
-  object-fit: cover;
-  height: 530px;
+.personinfobox-content-poster img {
   width: 100%;
-  object-position: 0 10%;
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid rgb(41, 34, 34);
+  box-shadow: 5px 5px 10px rgba(95, 91, 91, 0.1);
 }
 
-.personinfo-texts {
-  width: 70%;
-  display: inline-block;
-  vertical-align: top;
-
-  padding: 20px 40px;
+.personinfobox-content-info {
+  flex: 0 0 75%;
+  padding-left: 40px;
 }
 
-.personinfo-texts h1 {
-  font-size: 50px;
+.personinfobox-text-name {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
 }
 
-.personinfo-texts p {
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: -5px;
+.personinfobox-text-info {
+  color: rgb(221, 213, 213);
+  font-size: 16px;
+  margin-bottom: 0px;
 }
 
-.personinfo-texts span {
-  font-weight: 100;
+.personinfobox-text-biographyheader {
+  color: rgb(221, 213, 213);
+  font-size: 18px;
+  margin-bottom: 2px;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
-.wrapper-biography {
-  max-width: 1500px;
-  padding: 20px 20px;
-  margin: 0 auto;
-}
-
-.wrapper-biography p {
-  font-size: 17px;
-  text-indent: 40px;
+.personinfobox-text-biography {
+  font-size: 16px;
+  /* line-height: 1.6; */
+  color: rgb(196, 167, 167);
+  margin-bottom: 10px;
 }
 
 /* laptop retina screens(13 and 15 macbooks) */
