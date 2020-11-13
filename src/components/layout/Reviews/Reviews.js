@@ -10,18 +10,21 @@ class Reviews extends Component {
 
     if (results) {
       return (
-        <div className='container-fluid wrapper-reviews'>
-          <div className='header-reviews'>
-            <h2>Movie Reviews</h2>
-            <hr />
+        <div className='reviews-wrapper container'>
+          <div className='reviews-header'>
+            <p>Movie Reviews</p>
           </div>
           <div className='reviews-content'>
             {results.length > 0 ? (
               results.map((review, index) => (
-                <div key={index} className='individual-review'>
-                  <h6>A review by {review.author}</h6>
-                  <p>{review.content}</p>
-                  <hr />
+                <div key={index} className='review-flex'>
+                  <div className='review-flex-left'>
+                    <p className='review-text-name'>{review.author}</p>
+                    <div className='reviewer-square'></div>
+                  </div>
+                  <div className='review-flex-right'>
+                    <p className='review-text-review'>{review.content}</p>
+                  </div>
                 </div>
               ))
             ) : (

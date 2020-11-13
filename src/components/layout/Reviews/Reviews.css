@@ -1,32 +1,53 @@
 .wrapper-reviews {
-  background-color: rgb(250, 243, 243);
   font-family: 'Montserrat', sans-serif;
 }
 
-.header-reviews {
+.reviews-header {
   padding-top: 15px;
-}
-
-.header-reviews h2 {
-  font-size: 30px;
-  font-weight: 600;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(145, 111, 111);
 }
 
 .reviews-content {
-  padding: 0px 15px 15px 15px;
+  padding: 20px 0;
 }
 
-.reviews-content h6 {
-  font-size: 18px;
+.review-flex {
+  display: flex;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
 }
 
-.reviews-content p {
+.review-flex-left {
+  flex: 0 0 20%;
+  text-align: left;
+}
+
+.review-flex-right {
+  flex: 0 0 80%;
+}
+
+.review-text-name {
+  font-weight: 700;
+  font-size: 17px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.reviewer-square {
+  width: 150px;
+  height: 150px;
+  background: rgb(53, 34, 34);
+}
+.review-text-review {
   font-size: 15px;
-  text-indent: 25px;
-}
-
-.individual-review p {
-  padding: 0px 15px;
+  color: white;
+  line-height: 1.4;
 }
 
 /* laptop retina screens(13 and 15 macbooks) */

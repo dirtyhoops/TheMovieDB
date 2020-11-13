@@ -6,21 +6,13 @@
 }
 
 .movies-header {
-  padding-bottom: 15px;
+  padding-top: 15px;
   color: white;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
-.movies-header h2 {
-  font-weight: 600;
-  font-size: 30px;
-}
-/* 
-.movies-container {
-} */
 
 .movies-grid {
   display: flex;

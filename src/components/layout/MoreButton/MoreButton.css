@@ -13,6 +13,7 @@
   font-size: 15px;
   border-radius: 10px;
   transition: all 0.2s ease;
+  outline: none;
 }
 
 .wrapper-morebutton button:hover {
