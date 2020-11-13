@@ -9,10 +9,7 @@ const Cast = props => {
 
   return (
     <div className='actors-grid-box'>
-      <Link
-        to={`/person/${id}`}
-        style={{ textDecoration: 'none', color: 'black' }}
-      >
+      <Link to={`/person/${id}`} style={{ textDecoration: 'none' }}>
         <div className='actors-card'>
           <img
             src={

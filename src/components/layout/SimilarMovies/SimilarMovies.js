@@ -24,6 +24,7 @@ class SimilarMovies extends Component {
                 <Link
                   to={`/movie/${similarMovie.id}`}
                   onClick={() => this.props.onClick(similarMovie.id)}
+                  style={{ textDecoration: 'none' }}
                 >
                   <div className='similarMovies-card'>
                     <img

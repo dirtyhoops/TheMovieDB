@@ -1,5 +1,20 @@
 .wrapper-morebutton {
-  padding: 20px 30px 30px 30px;
-  max-width: 1600px;
+  padding: 30px 30px 100px 30px;
   margin: 0 auto;
+  background-color: #121620;
+  text-align: center;
+}
+
+.wrapper-morebutton button {
+  padding: 10px 30px;
+  background: red;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.wrapper-morebutton button:hover {
+  transform: translateY(-2px);
 }
