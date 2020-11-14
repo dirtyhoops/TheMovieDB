@@ -62,12 +62,14 @@ class MovieInfoBox extends Component {
           />
         </div>
 
-        <div className='movieinfobox2-overview-small'>
-          <p className='movieinfobox2-text-overviewheader'>Overview</p>
-          <p className='movieinfobox2-text-overview-sm'>
-            {selectedMovie.overview}
-          </p>
-        </div>
+        {selectedMovie.overview !== '' ? (
+          <div className='movieinfobox2-overview-small'>
+            <p className='movieinfobox2-text-overviewheader'>Overview</p>
+            <p className='movieinfobox2-text-overview-sm'>
+              {selectedMovie.overview}
+            </p>
+          </div>
+        ) : null}
       </div>
     );
   }

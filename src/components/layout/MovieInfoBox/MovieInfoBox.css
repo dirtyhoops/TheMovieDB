@@ -295,9 +295,10 @@
 
   .movieinfobox2-text-overviewheader {
     font-size: 15px;
-    margin-top: 0px;
     color: rgb(221, 213, 213);
-    /* display: none; */
+    margin-bottom: 2px;
+    font-weight: 700;
+    margin-top: 20px;
   }
 
   .movieinfobox2-text-overview-sm {
