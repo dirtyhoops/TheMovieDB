@@ -10,8 +10,8 @@ class NavBar extends Component {
     const { genres } = this.props;
 
     return (
-      <nav className='navbar navbar-expand-lg navbar-dark bg-dark sticky-top'>
-        <div className='container-fluid'>
+      <nav className='navbar navbar-expand-lg navbar-dark bg-dark sticky-top nav-bar'>
+        <div className='container'>
           <Link to='/' className='navbar-brand'>
             TheMovieDB
           </Link>

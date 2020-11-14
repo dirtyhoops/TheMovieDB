@@ -28,6 +28,7 @@
   margin: 0 auto;
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 .heroimage-text {
@@ -35,6 +36,7 @@
   max-width: 700px;
   position: absolute;
   left: 15px;
+  right: 15px;
   bottom: 40px;
   min-height: 100px;
   background: rgba(0, 0, 0, 0);
@@ -69,7 +71,7 @@
   margin-left: 5px;
 }
 
-.heroiamge-text-overview {
+.heroimage-text-overview {
   font-size: 16px;
   line-height: 1.5;
   color: #fff;
@@ -77,52 +79,43 @@
 
 /* laptop retina screens(13 and 15 macbooks) */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .wrapper-heroimage-content {
-    padding-left: 50px;
-  }
-
   .wrapper-heroimage {
-    height: 350px;
-  }
-
-  .wrapper-heroimage-text {
-    max-width: 600px;
-    bottom: 20px;
-  }
-
-  .wrapper-heroimage-text h1 {
-    font-size: 30px;
-  }
-
-  .wrapper-heroimage-text p {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .wrapper-heroimage-text span {
-    font-size: 22px;
-    padding: 5px 0px;
+    height: 500px;
   }
 }
 
 /* iPad in portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .wrapper-heroimage {
-    height: 350px;
+    height: 400px;
   }
 
-  .wrapper-heroimage-text h1 {
-    font-size: 24px;
+  .heroimage-text-title {
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 600;
   }
 
-  .wrapper-heroimage-text p {
+  .heroimage-text-average {
+    flex: 0 0 13%;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .span-star3 {
+    font-size: 17px;
+    color: gold;
+    margin-left: 5px;
+  }
+
+  .heroimage-text-overview {
     font-size: 15px;
     line-height: 1.5;
-  }
-
-  .wrapper-heroimage-text span {
-    font-size: 16px;
-    padding: 5px 0px;
+    color: #fff;
   }
 }
 
@@ -130,26 +123,52 @@
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
   (min-device-width: 320px) and (max-device-width: 568px) {
   .wrapper-heroimage {
-    height: 300px;
+    height: 320px;
   }
 
-  .wrapper-heroimage-text {
-    max-width: 100%;
-    bottom: 20px;
-    padding-right: 20px;
+  .heroimage-content {
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
   }
 
-  .wrapper-heroimage-text h1 {
-    font-size: 19px;
+  .heroimage-text {
+    bottom: 25px;
   }
 
-  .wrapper-heroimage-text p {
-    font-size: 11px;
-    line-height: 15px;
+  .heroimage-text-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
   }
 
-  .wrapper-heroimage-text span {
+  .heroimage-text-title {
+    flex: 0 0 70%;
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 0;
+  }
+
+  .heroimage-text-average {
+    flex: 0 0 18%;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: right;
+    margin-bottom: 0px;
+  }
+
+  .span-star3 {
     font-size: 13px;
-    padding: 5px 0px;
+    color: gold;
+    margin-left: 5px;
+  }
+
+  .heroimage-text-overview {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #fff;
   }
 }

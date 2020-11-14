@@ -1,7 +1,7 @@
 .wrapper-searchbar {
   width: 100%;
   height: 75px;
-  background: #1d1c1c;
+  background: #171b25;
   position: relative;
   padding: 12px 20px;
   box-sizing: border-box;
@@ -10,7 +10,7 @@
 
 .searchbar-content {
   height: 50px;
-  background: #2e2d2d;
+  background: #2b2828;
   /* margin: 0 auto; */
   border-radius: 10px;
   position: relative;

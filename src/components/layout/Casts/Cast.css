@@ -65,55 +65,6 @@
   line-height: 1.5;
 }
 
-.header-casts h2 {
-  font-size: 30px;
-  font-weight: 600;
-}
-
-.wrapper-card {
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: 0.3s;
-  margin: 0 auto;
-}
-
-/* On mouse-over, add a deeper shadow */
-.wrapper-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-  transition: 0.5 ease;
-}
-
-/* Add some padding inside the card container */
-.container-card {
-  padding: 2px 16px;
-}
-
-.wrapper-card:hover {
-  width: 90%;
-  transition: 0.4 ease;
-}
-
-.container-card h6,
-.container-card p {
-  margin: 1px;
-}
-
-.container-card h6 {
-  font-size: 18px;
-}
-
-.container-card p {
-  font-size: 17px;
-}
-
-.wrapper-card img {
-  object-fit: cover;
-  height: 250px;
-  width: 100%;
-  object-position: 0 10%;
-}
-
 /* laptop retina screens(13 and 15 macbooks) */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .wrapper-card {
@@ -145,59 +96,69 @@
 
 /* iPad in portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .wrapper-card {
-    width: 90%;
+  .actors-header {
+    font-size: 18px;
   }
 
-  .header-casts h2 {
-    font-size: 22px;
+  .actors-grid-box {
+    flex: 0 0 19%;
+    margin-bottom: 6px;
   }
 
-  .container-card h6 {
-    font-size: 14px;
+  .actors-grid-box-spacer {
+    flex: 0 0 32%;
+    margin-bottom: 6px;
   }
 
-  .container-card p {
+  .actors-card img {
+    height: 160px;
+  }
+
+  .actors-card-info {
+    margin-top: 5px;
+  }
+
+  .actors-text-name {
+    color: rgb(190, 165, 165);
     font-size: 13px;
   }
 
-  .container-card {
-    padding: 2px;
-  }
-
-  .wrapper-card img {
-    height: 180px;
-    object-fit: cover;
-    object-position: 0 10%;
+  .actors-text-char {
+    font-size: 12px;
   }
 }
 
 /* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) and IPHONE 6/7/8 for (min-device-width: 375px) and (max-device-width: 812px) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
   (min-device-width: 320px) and (max-device-width: 568px) {
-  .wrapper-card {
-    width: 90%;
+  .actors-header {
+    font-size: 13px;
   }
 
-  .header-casts h2 {
-    font-size: 18px;
+  .actors-grid-box {
+    flex: 0 0 32%;
+    margin-bottom: 6px;
   }
 
-  .container-card h6 {
+  .actors-grid-box-spacer {
+    flex: 0 0 32%;
+    margin-bottom: 6px;
+  }
+
+  .actors-card img {
+    height: 130px;
+  }
+
+  .actors-card-info {
+    margin-top: 5px;
+  }
+
+  .actors-text-name {
+    color: rgb(190, 165, 165);
     font-size: 12px;
   }
 
-  .container-card p {
+  .actors-text-char {
     font-size: 11px;
-  }
-
-  .container-card {
-    padding: 2px;
-  }
-
-  .wrapper-card img {
-    height: 130px;
-    object-fit: cover;
-    object-position: 0 10%;
   }
 }

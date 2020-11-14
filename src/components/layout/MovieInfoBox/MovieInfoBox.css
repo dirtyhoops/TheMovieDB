@@ -230,50 +230,108 @@
 /* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) and IPHONE 6/7/8 for (min-device-width: 375px) and (max-device-width: 812px) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
   (min-device-width: 320px) and (max-device-width: 568px) {
-  .wrapper-movieinfobox {
-    height: 220px;
+  .movieinfobox-wrapper {
+    background: #121620;
   }
 
-  .movieinfobox-content {
-    background: 0;
-    color: white;
-    height: auto;
-    padding: 10px;
-    margin-top: -75px;
-  }
-
-  .movieinfobox-poster {
-    width: 40%;
-  }
-
-  .movieinfobox-text {
-    width: 60%;
-    margin-top: 60px;
-    padding: 12px;
-  }
-
-  .movieinfobox-text h1 {
-    font-size: 17px;
-  }
-
-  .movieinfobox-text p,
-  .movie-overview p {
-    font-size: 12px;
-    line-height: 17px;
-    margin: 2px;
-  }
-
-  .movie-overview {
-    padding: 0px 10px 5px 10px;
+  .movieinfobox2-content {
+    padding: 50px 15px;
+    display: flex;
     width: 100%;
+    color: white;
   }
 
-  .movie-overview p {
-    text-indent: 20px;
+  .movieinfobox2-poster {
+    flex: 0 0 25%;
   }
 
-  .movie-overview h6 {
+  .movieinfobox2-poster img {
+    width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid rgb(41, 34, 34);
+    box-shadow: 5px 5px 10px rgba(95, 91, 91, 0.1);
+  }
+
+  .movieinfobox2-text {
+    flex: 0 0 75%;
+    padding-left: 40px;
+  }
+
+  .movieinfobox2-text-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .movieinfobox2-text-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .movieinfobox2-text-star {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    flex: 0 0 9%;
+    text-align: right;
+  }
+
+  .span-star {
+    font-size: 18px;
+    margin-left: 5px;
+    color: gold;
+  }
+
+  .span-clock {
+    font-size: 13px;
+  }
+
+  .movieinfobox2-text-genre {
+    font-weight: 500;
+    color: rgb(221, 213, 213);
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .movieinfobox2-text-country {
+    font-weight: 500;
+    color: rgb(221, 213, 213);
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .movieinfobox2-text-overview {
+    font-size: 16px;
+    /* line-height: 1.6; */
+    color: rgb(196, 167, 167);
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .movieinfobox2-text-director {
+    font-weight: 500;
+    color: rgb(221, 213, 213);
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .button-trailer {
+    padding: 10px 30px;
+    color: white;
+    border: 0;
+    border-radius: 25px;
+    background-color: rgb(243, 70, 70);
+    font-weight: 500;
     font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .span-play {
+    font-size: 11px;
+    margin-right: 5px;
   }
 }
 

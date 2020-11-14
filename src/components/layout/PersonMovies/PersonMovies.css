@@ -106,71 +106,47 @@
 
 /* iPad in portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .wrapper-personmovies {
-    margin-top: 2px;
+  .personmovie-header {
+    font-size: 18px;
   }
 
-  .personmovie-image-container {
-    width: 90%;
+  .personmovie-grid-spacer {
+    flex: 0 0 24%;
   }
 
-  .personmovie-image img {
-    object-fit: cover;
-    width: 100%;
-    box-shadow: 2px 2px 6px rgb(107, 103, 103);
-    border: 1px solid rgb(161, 156, 156);
+  .personmovie-grid-box {
+    flex: 0 0 24%;
   }
 
-  .personmovie-text {
-    padding-top: 8px;
+  .personmovie-text-title {
+    font-size: 13px;
   }
 
-  .personmovie-text p,
-  .personmovie-text h6 {
-    font-size: 15px;
-  }
-
-  .personmovie-text p {
-    line-height: 16px;
-  }
-
-  .personmovie-header h2 {
-    font-size: 22px;
+  .personmovie-text-role {
+    font-size: 12px;
   }
 }
 
 /* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) and IPHONE 6/7/8 for (min-device-width: 375px) and (max-device-width: 812px) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
   (min-device-width: 320px) and (max-device-width: 568px) {
-  .wrapper-personmovies {
-    margin-top: 2px;
+  .personmovie-header {
+    font-size: 13px;
   }
 
-  .personmovie-image-container {
-    width: 90%;
+  .personmovie-grid-spacer {
+    flex: 0 0 48%;
   }
 
-  .personmovie-image img {
-    object-fit: cover;
-    width: 100%;
-    box-shadow: 2px 2px 6px rgb(107, 103, 103);
-    border: 1px solid rgb(161, 156, 156);
+  .personmovie-grid-box {
+    flex: 0 0 48%;
   }
 
-  .personmovie-text {
-    padding-top: 10px;
+  .personmovie-text-title {
+    font-size: 12px;
   }
 
-  .personmovie-text p,
-  .personmovie-text h6 {
+  .personmovie-text-role {
     font-size: 11px;
-  }
-
-  .personmovie-text p {
-    line-height: 12px;
-  }
-
-  .personmovie-header h2 {
-    font-size: 18px;
   }
 }

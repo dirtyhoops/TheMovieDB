@@ -93,8 +93,8 @@
 
 /* iPad in portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .movies-header h2 {
-    font-size: 22px;
+  .movies-header {
+    font-size: 18px;
   }
 
   .movies-grid-box {
@@ -109,8 +109,8 @@
     padding-top: 5px;
   }
 
-  .movies-header h2 {
-    font-size: 18px;
+  .movies-header {
+    font-size: 13px;
   }
 
   .movies-grid-box {
