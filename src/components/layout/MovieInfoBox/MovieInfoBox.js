@@ -61,6 +61,13 @@ class MovieInfoBox extends Component {
             movieCrew={selectedMovieCrew}
           />
         </div>
+
+        <div className='movieinfobox2-overview-small'>
+          <p className='movieinfobox2-text-overviewheader'>Overview</p>
+          <p className='movieinfobox2-text-overview-sm'>
+            {selectedMovie.overview}
+          </p>
+        </div>
       </div>
     );
   }

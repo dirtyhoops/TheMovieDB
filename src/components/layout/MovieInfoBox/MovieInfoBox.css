@@ -102,13 +102,8 @@
   margin-right: 5px;
 }
 
-@keyframes animateMovieinfoBox {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.movieinfobox2-overview-small {
+  display: none;
 }
 
 /* laptop retina screens(13 and 15 macbooks) */
@@ -230,59 +225,32 @@
 /* FOR MOBILE PHONES (IPHONE 6 Plus/7 Plus/8 Plus/X/X max) and IPHONE 6/7/8 for (min-device-width: 375px) and (max-device-width: 812px) */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
   (min-device-width: 320px) and (max-device-width: 568px) {
-  .movieinfobox-wrapper {
-    background: #121620;
-  }
-
   .movieinfobox2-content {
-    padding: 50px 15px;
-    display: flex;
-    width: 100%;
-    color: white;
+    padding: 25px 15px;
   }
 
   .movieinfobox2-poster {
-    flex: 0 0 25%;
-  }
-
-  .movieinfobox2-poster img {
-    width: 100%;
-    background-size: cover;
-    border-radius: 10px;
-    border: 1px solid rgb(41, 34, 34);
-    box-shadow: 5px 5px 10px rgba(95, 91, 91, 0.1);
+    flex: 0 0 40%;
   }
 
   .movieinfobox2-text {
-    flex: 0 0 75%;
-    padding-left: 40px;
-  }
-
-  .movieinfobox2-text-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex: 0 0 57%;
+    padding-left: 15px;
   }
 
   .movieinfobox2-text-title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 4px;
+    font-size: 19px;
   }
 
   .movieinfobox2-text-star {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1;
-    flex: 0 0 9%;
-    text-align: right;
+    font-size: 15px;
+    flex: 0 0 25%;
+    margin-bottom: 0;
   }
 
   .span-star {
-    font-size: 18px;
-    margin-left: 5px;
-    color: gold;
+    font-size: 13px;
+    margin-left: 3px;
   }
 
   .span-clock {
@@ -290,48 +258,52 @@
   }
 
   .movieinfobox2-text-genre {
-    font-weight: 500;
-    color: rgb(221, 213, 213);
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 0px;
   }
 
   .movieinfobox2-text-country {
-    font-weight: 500;
-    color: rgb(221, 213, 213);
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 0px;
   }
 
   .movieinfobox2-text-overview {
-    font-size: 16px;
-    /* line-height: 1.6; */
-    color: rgb(196, 167, 167);
-    margin-top: 20px;
-    margin-bottom: 10px;
+    display: none;
   }
 
   .movieinfobox2-text-director {
-    font-weight: 500;
-    color: rgb(221, 213, 213);
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 4px;
   }
 
   .button-trailer {
-    padding: 10px 30px;
-    color: white;
-    border: 0;
-    border-radius: 25px;
-    background-color: rgb(243, 70, 70);
-    font-weight: 500;
-    font-size: 14px;
-    margin-top: 20px;
+    padding: 6px 15px;
+    font-size: 12px;
+    margin-top: 5px;
   }
 
   .span-play {
-    font-size: 11px;
+    font-size: 10px;
     margin-right: 5px;
+  }
+
+  .movieinfobox2-overview-small {
+    display: block;
+    padding: 0px 15px;
+    color: white;
+  }
+
+  .movieinfobox2-text-overviewheader {
+    font-size: 15px;
+    margin-top: 0px;
+    color: rgb(221, 213, 213);
+    /* display: none; */
+  }
+
+  .movieinfobox2-text-overview-sm {
+    font-size: 14px;
+    color: rgb(196, 167, 167);
+    /* display: none; */
   }
 }
 
