@@ -62,6 +62,12 @@ class PersonInfoBox extends Component {
             ) : null}
           </div>
         </div>
+        {biography !== '' ? (
+          <div className='wrapper-biography-small'>
+            <p className='personinfobox-text-biographyheader'>Biography </p>
+            <p className='personinfobox-text-biography'>{biography}</p>
+          </div>
+        ) : null}
       </div>
     );
   }
